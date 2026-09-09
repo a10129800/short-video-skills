@@ -41,7 +41,32 @@
     </div>
   </header>
 
-  <main>
+  <!-- 畫面最左側 Skills 名稱目錄 (Left Sidebar Navigation) -->
+  <aside class="skills-sidebar" id="skillsSidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-title-group">
+        <span class="sidebar-icon">📑</span>
+        <span class="sidebar-title">Skills 目錄</span>
+      </div>
+      <button class="sidebar-toggle-btn" id="sidebarToggleBtn" title="收合目錄" aria-label="Toggle Sidebar">◀</button>
+    </div>
+    <div class="sidebar-body">
+      <ul class="sidebar-list" id="sidebarList">
+        <!-- 由 JavaScript 動態生成 -AAA / -BBB 格式目錄 -->
+      </ul>
+    </div>
+    <div class="sidebar-footer">
+      <span class="sidebar-counter">共 8 個技能模組</span>
+    </div>
+  </aside>
+
+  <!-- 左側目錄浮動快捷開關（收合或小螢幕時顯示） -->
+  <button class="sidebar-floating-btn" id="sidebarFloatingBtn" title="開啟 Skills 目錄" aria-label="Open Skills Directory">
+    <span class="floating-icon">📑</span>
+    <span class="floating-text">Skills 目錄</span>
+  </button>
+
+  <main id="mainContent">
     <!-- HERO 區塊 -->
     <section class="hero-section">
       <div class="container hero-content">

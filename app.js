@@ -288,11 +288,108 @@ const SKILLS_DATA = [
 // 初始化 DOM 元素
 document.addEventListener("DOMContentLoaded", () => {
   renderSkills(SKILLS_DATA);
+  setupSkillsSidebar(SKILLS_DATA);
   setupFilters();
   setupSearch();
   setupModal();
   setupMobileNav();
 });
+
+/**
+ * 畫面最左側 Skills 名稱目錄 (規格：-AAA / -BBB)
+ */
+function setupSkillsSidebar(skills) {
+  const sidebarList = document.getElementById("sidebarList");
+  const sidebar = document.getElementById("skillsSidebar");
+  const toggleBtn = document.getElementById("sidebarToggleBtn");
+  const floatingBtn = document.getElementById("sidebarFloatingBtn");
+  if (!sidebarList || !sidebar) return;
+
+  sidebarList.innerHTML = "";
+
+  // 依照使用者規格 -AAA / -BBB 格式生成目錄項目
+  skills.forEach(skill => {
+    const li = document.createElement("li");
+    li.className = "sidebar-item";
+
+    const a = document.createElement("a");
+    a.href = `#skill-${skill.id}`;
+    a.className = "sidebar-item-link";
+    a.dataset.id = skill.id;
+    a.title = `${skill.id} (${skill.name})`;
+    a.innerHTML = `<span class="hyphen">-</span><span class="skill-name">${skill.id}</span>`;
+
+    // 點擊目錄項目：平滑跳轉並觸發目標卡片高亮霓虹動畫
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // 更新側邊欄 active 狀態
+      document.querySelectorAll(".sidebar-item-link").forEach(el => el.classList.remove("active"));
+      a.classList.add("active");
+
+      // 檢查是否被目前 filter 隱藏，若是則自動切換回全選
+      const targetCard = document.getElementById(`skill-${skill.id}`);
+      const activePill = document.querySelector(".pill-btn.active");
+      if (targetCard && targetCard.offsetParent === null && activePill && activePill.dataset.filter !== "all") {
+        document.querySelector('.pill-btn[data-filter="all"]')?.click();
+      }
+
+      // 平滑滾動至目標卡片
+      const finalCard = document.getElementById(`skill-${skill.id}`);
+      if (finalCard) {
+        finalCard.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        // 觸發卡片高亮光暈脈衝動畫
+        finalCard.classList.remove("highlight-pulse");
+        void finalCard.offsetWidth; // 強制重繪以重啟 CSS 動畫
+        finalCard.classList.add("highlight-pulse");
+      }
+
+      // 小螢幕下跳轉後自動收合目錄
+      if (window.innerWidth <= 1280) {
+        sidebar.classList.remove("open-mobile");
+      }
+    });
+
+    li.appendChild(a);
+    sidebarList.appendChild(li);
+  });
+
+  // 收合目錄按鈕事件
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.add("collapsed");
+      sidebar.classList.remove("open-mobile");
+      floatingBtn?.classList.add("visible");
+    });
+  }
+
+  // 浮動快捷開關事件（重新開啟目錄）
+  if (floatingBtn) {
+    floatingBtn.addEventListener("click", () => {
+      sidebar.classList.remove("collapsed");
+      sidebar.classList.add("open-mobile");
+      floatingBtn.classList.remove("visible");
+    });
+  }
+
+  // 滾動自動追蹤 (ScrollSpy)：畫面滑動到哪個 Skill 卡片，目錄自動對應高亮
+  window.addEventListener("scroll", () => {
+    const scrollPos = window.scrollY + window.innerHeight / 3;
+    skills.forEach(skill => {
+      const card = document.getElementById(`skill-${skill.id}`);
+      if (card && card.offsetParent !== null) {
+        const top = card.offsetTop;
+        const height = card.offsetHeight;
+        if (scrollPos >= top && scrollPos < top + height) {
+          document.querySelectorAll(".sidebar-item-link").forEach(el => el.classList.remove("active"));
+          const activeLink = document.querySelector(`.sidebar-item-link[data-id="${skill.id}"]`);
+          if (activeLink) activeLink.classList.add("active");
+        }
+      }
+    });
+  }, { passive: true });
+}
 
 /**
  * 渲染技能卡片網格
@@ -313,6 +410,7 @@ function renderSkills(skills) {
   skills.forEach(skill => {
     const card = document.createElement("div");
     card.className = "skill-card";
+    card.id = `skill-${skill.id}`; // 與左側目錄錨點精準對應
     card.onclick = () => openSkillModal(skill.id);
 
     const modesBadges = skill.modes.map(m => `<span class="mode-badge">${m}</span>`).join("");
