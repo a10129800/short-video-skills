@@ -1,0 +1,28 @@
+{
+  "workflow_type": "minimax_h3_multi_reference",
+  "project_name": "hero_vs_shadow_beast",
+  "aspect_ratio": "16:9",
+  "reference_pack": {
+    "node_character": {
+      "target_node": "Load Image (Subject)",
+      "output_filename": "ref_character.png",
+      "prompt": "Character concept art, a young East Asian superhero boy with messy auburn hair, black stealth superhero suit with white star logo, vibrant crimson cape billowing behind, confident heroic pose, sharp rim lighting, dark minimalist background, 8k resolution"
+    },
+    "node_creature": {
+      "target_node": "Load Image (Creature/Prop)",
+      "output_filename": "ref_creature.png",
+      "prompt": "Creature concept design, a gigantic demonic shadow beast with pitch black obsidian armored scales, glowing red molten core in chest, blue electric lightning bolts dancing on sharp shoulders, roaring fangs, cinematic dark lighting, 8k"
+    },
+    "node_environment": {
+      "target_node": "Load Image (Environment/Scene)",
+      "output_filename": "ref_environment.png",
+      "prompt": "Cinematic wide environment shot, empty rainy skyscraper rooftop at night, glowing neon cyberpunk metropolis skyline in distant background, puddle water reflections, atmospheric volumetric haze, moody dark blue and crimson lighting"
+    },
+    "node_first_frame": {
+      "target_node": "Load Image (Starting Frame)",
+      "output_filename": "ref_first_frame.png",
+      "prompt": "Cinematic 16:9 standoff wide shot, the red-caped superhero boy on left rooftop facing the towering lightning shadow beast on right, heavy rainstorm, dramatic rim lights, epic pre-fight tension, 35mm film grain"
+    }
+  },
+  "minimax_video_prompt": "Cinematic dynamic push-in. The young hero readies his stance with fists glowing with energy, facing the roaring shadow beast which lunges forward amidst thunder and rain, hyper-realistic motion."
+}

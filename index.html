@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 短動態影片生產管線 Skills 套件 | GitHub Pages 官方入口</title>
+  <meta name="description" content="專為 Antigravity / AI Agent 與創作者打造的短影音全流程技能套件：劇本導演、多風格分鏡、批次生圖、Kling/Runway運鏡驅動、TTS與BGM音訊卡點、FFmpeg自動剪輯合成。">
+  <meta property="og:title" content="AI 短動態影片生產管線 Skills 套件">
+  <meta property="og:description" content="8 大模組化 AI Skills，打通從創意腳本到 9:16 直式短影音成片的工業化生產流程。">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 背景流光與網格特效 -->
+  <div class="glow-bg"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- 頂部導航列 -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <span class="brand-badge">PRO</span>
+        <span class="brand-title">AI Video Skills Suite</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#pipeline">全流程管線</a>
+        <a href="#skills">8大技能庫</a>
+        <a href="#runninghub">RunningHub專區</a>
+        <a href="#case-study">實戰案例</a>
+        <a href="#deploy-guide" class="btn-nav-highlight">GitHub Pages 部署</a>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO 區塊 -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="pulsing-dot"></span> Antigravity / AI Agent 工業級短影音技能套件
+        </div>
+        <h1 class="hero-title">
+          全自動化 <span class="gradient-text">AI 短動態影片</span><br>工業級生產流水線
+        </h1>
+        <p class="hero-subtitle">
+          專為 <strong>TikTok、Instagram Reels、YouTube Shorts</strong> 打造。打通黃金前 3 秒留存 Hook、角色一致性、電影級動態運鏡、音訊毫秒卡點與自動化剪輯合成。
+        </p>
+
+        <div class="hero-actions">
+          <a href="#skills" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            探索 8 大技能庫
+          </a>
+          <a href="#runninghub" class="btn btn-secondary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+            MiniMax H3 / RunningHub 專區
+          </a>
+          <a href="#deploy-guide" class="btn btn-outline">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub 部署指引
+          </a>
+        </div>
+
+        <!-- 數據指標列 -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-num">8</span>
+            <span class="stat-label">專屬專業 Skills</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">6+</span>
+            <span class="stat-label">動漫與電影美術學派</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">9:16</span>
+            <span class="stat-label">手機直式極限留存</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">角色跨鏡一致性</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 管線全景圖 (PIPELINE WORKFLOW) -->
+    <section class="section" id="pipeline">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">ARCHITECTURE</span>
+          <h2 class="section-title">全自動生產管線協同流程</h2>
+          <p class="section-desc">從一句靈感提示到 9:16 成品發布，各專業 Agent 技能的無縫交接協同體系</p>
+        </div>
+
+        <div class="pipeline-flow-wrapper">
+          <div class="pipeline-step-card" data-step="1">
+            <div class="step-num">01</div>
+            <div class="step-icon">🎬</div>
+            <h4>短片導演與劇本</h4>
+            <p class="step-skill">short-video-director</p>
+            <p class="step-text">黃金 3 秒留存 Hook、15/30/60秒節奏曲線、直式分鏡明細表</p>
+          </div>
+
+          <div class="flow-arrow">➔</div>
+
+          <div class="pipeline-step-card" data-step="2">
+            <div class="step-num">02</div>
+            <div class="step-icon">🖼️</div>
+            <h4>視覺分鏡與美術</h4>
+            <p class="step-skill">visual-storyboard-artist</p>
+            <p class="step-text">4大分鏡風格、日式作畫 Sakuga、角色三視圖 Model Sheet</p>
+          </div>
+
+          <div class="flow-arrow">➔</div>
+
+          <div class="pipeline-step-card" data-step="3">
+            <div class="step-num">03</div>
+            <div class="step-icon">🎨</div>
+            <h4>批次生圖與資產包</h4>
+            <p class="step-skill">storyboard-image-generator</p>
+            <p class="step-text">Reference Chaining 參考圖鏈接、聯絡總覽表、MiniMax H3 資產包</p>
+          </div>
+
+          <div class="flow-arrow">➔</div>
+
+          <div class="pipeline-step-card" data-step="4">
+            <div class="step-num">04</div>
+            <div class="step-icon">🎥</div>
+            <h4>視訊運鏡提示詞</h4>
+            <p class="step-skill">motion-prompt-engineer</p>
+            <p class="step-text">Kling / Runway / Hailuo 提示詞工程、運鏡參數與 API JSON</p>
+          </div>
+
+          <div class="flow-arrow">➔</div>
+
+          <div class="pipeline-step-card" data-step="5">
+            <div class="step-num">05</div>
+            <div class="step-icon">🔊</div>
+            <h4>聲音設計與卡點</h4>
+            <p class="step-skill">audio-sound-designer</p>
+            <p class="step-text">TTS 語音情緒標註、Suno 130 BPM 提示詞、SFX 毫秒對位</p>
+          </div>
+
+          <div class="flow-arrow">➔</div>
+
+          <div class="pipeline-step-card" data-step="6">
+            <div class="step-num">06</div>
+            <div class="step-icon">✂️</div>
+            <h4>合成組裝剪輯</h4>
+            <p class="step-skill">video-assembly-pipeline</p>
+            <p class="step-text">9:16 直式安全區、爆款彈跳字幕、FFmpeg 一鍵無損混音組裝</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 大技能庫展示區 (SKILLS HUB) -->
+    <section class="section bg-alt" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">SKILLS CATALOG</span>
+          <h2 class="section-title">8 大技能庫與多種特化模式</h2>
+          <p class="section-desc">點擊卡片可深入檢視各技能的「多種模式、學派預設、Prompt 語法公式與執行腳本」</p>
+        </div>
+
+        <!-- 篩選器與搜尋列 -->
+        <div class="filter-bar">
+          <div class="filter-pills" id="filterPills">
+            <button class="pill-btn active" data-filter="all">全部技能 (8)</button>
+            <button class="pill-btn" data-filter="director">導演與企劃</button>
+            <button class="pill-btn" data-filter="visual">視覺與動漫</button>
+            <button class="pill-btn" data-filter="generate">生圖與運鏡</button>
+            <button class="pill-btn" data-filter="audio-post">音訊與剪輯</button>
+          </div>
+          <div class="search-box">
+            <input type="text" id="skillSearch" placeholder="搜尋技能名稱、模式、學派或關鍵字..." aria-label="Search Skills">
+          </div>
+        </div>
+
+        <!-- 技能卡片網格 -->
+        <div class="skills-grid" id="skillsGrid">
+          <!-- 由 app.js 動態渲染 8 大 Skills 卡片 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- RunningHub / MiniMax H3 專題展示區 (RUNNINGHUB SHOWCASE) -->
+    <section class="section" id="runninghub">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">FEATURED WORKFLOW</span>
+          <h2 class="section-title">RunningHub & MiniMax H3 參考生視頻工作流</h2>
+          <p class="section-desc">透過 `storyboard-image-generator` 模式 C，精準解耦並產生 4 大 Load Image 參考圖資產包</p>
+        </div>
+
+        <div class="rh-workflow-container">
+          <div class="rh-nodes-grid">
+            <div class="rh-node-card">
+              <div class="node-badge">Load Image #1</div>
+              <div class="node-title">主體角色 (ref_character.png)</div>
+              <p class="node-desc">人物半身/全身特寫，純色簡潔深底，高精五官、髮型與服裝細節，排除背景雜訊。</p>
+              <div class="node-tag">角色一致性錨定</div>
+            </div>
+
+            <div class="rh-node-card">
+              <div class="node-badge">Load Image #2</div>
+              <div class="node-title">對象/生物/道具 (ref_creature.png)</div>
+              <p class="node-desc">怪獸、戰術機甲或關鍵對手，突顯解剖骨骼、金屬/皮膚質感與特殊光效特徵。</p>
+              <div class="node-tag">交互對象特徵鎖定</div>
+            </div>
+
+            <div class="rh-node-card">
+              <div class="node-badge">Load Image #3</div>
+              <div class="node-title">環境場景 (ref_environment.png)</div>
+              <p class="node-desc">純空鏡（無主體人物），確立透視地平線、氣候光影氛圍（如雷雨夜、夕陽金光）。</p>
+              <div class="node-tag">世界觀透視與色溫</div>
+            </div>
+
+            <div class="rh-node-card highlight-node">
+              <div class="node-badge">Load Image #4</div>
+              <div class="node-title">起始關鍵格 (ref_first_frame.png)</div>
+              <p class="node-desc">主角與對手/生物同框對峙或起始互動之畫面，決定影片動作發生的第一幀初始姿態。</p>
+              <div class="node-tag highlight-tag">動態運動起點</div>
+            </div>
+          </div>
+
+          <!-- 提示詞範本展示卡 -->
+          <div class="rh-prompt-showcase">
+            <div class="rh-prompt-header">
+              <div class="tab-title">MiniMax H3 專用視訊動態提示詞 (Motion Prompt)</div>
+              <button class="btn-copy" onclick="copyText('minimax-motion-prompt')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                一鍵複製 Prompt
+              </button>
+            </div>
+            <div class="code-container">
+              <pre><code id="minimax-motion-prompt">Cinematic dynamic camera push-in. The red-caped boy clenches his fists as sparks ignite around him, while the giant demonic shadow beast roars violently, unleashing crackling electrical surges into the stormy sky. Heavy rain streams down, cape flapping fiercely in the wind, dramatic camera shudder on impact.</code></pre>
+            </div>
+            <div class="rh-tip">
+              <strong>💡 提示詞設計關鍵：</strong> 在 MiniMax H3 參考生視頻文字框中，<strong>無需重複描述靜態長相</strong>，只需專注描寫主體與對象之間的「動態動作演化、物理碰撞與攝影機運鏡軌跡」！
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 實戰全流程案例展示 (CASE STUDY) -->
+    <section class="section bg-alt" id="case-study">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CASE STUDY</span>
+          <h2 class="section-title">實戰示範：15 秒熱血動態短片《極限突破》</h2>
+          <p class="section-desc">從劇本分鏡、批次生圖、動態運鏡、音效對位到 FFmpeg 自動剪輯合成的完整聯動</p>
+        </div>
+
+        <div class="case-timeline">
+          <!-- 階段 1 -->
+          <div class="case-item">
+            <div class="case-marker">1</div>
+            <div class="case-body">
+              <div class="case-badge">階段一 · short-video-director</div>
+              <h3>9:16 直式分鏡時間軸與黃金前 3 秒 Hook</h3>
+              <p>選用<strong>【視覺衝擊型 Hook】</strong>：落後 1 分，倒數 3 秒，主角雙眼燃燒金光，大汗淋漓！</p>
+              <div class="table-responsive">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>鏡號</th>
+                      <th>時間</th>
+                      <th>景別與運鏡</th>
+                      <th>畫面動態視覺</th>
+                      <th>語音旁白</th>
+                      <th>音效與字卡</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Shot 01</strong></td>
+                      <td>00:00 - 00:03</td>
+                      <td>特寫 / 快速推鏡</td>
+                      <td>汗水甩出，計分板紅光頻閃，主角咬牙緊盯前方</td>
+                      <td>「所有人都叫我放棄……」</td>
+                      <td>[SFX: 心跳耳鳴 + 沉悶低頻]</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Shot 02</strong></td>
+                      <td>00:03 - 00:07</td>
+                      <td>中景 / 低角度跟鏡</td>
+                      <td>重心極限切入，防守失衡倒地，擦出火星殘影</td>
+                      <td>「但抱歉……」</td>
+                      <td>[SFX: 橡膠刺耳摩擦 + 風刃]</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Shot 03</strong></td>
+                      <td>00:07 - 00:11</td>
+                      <td>仰角 / 360° 環繞慢動作</td>
+                      <td>高高躍起滯空，指尖壓腕出手，光芒環繞</td>
+                      <td>「這座球場，我說了算！」</td>
+                      <td>[SFX: 高頻心跳驟停，全場屏息]</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Shot 04</strong></td>
+                      <td>00:11 - 00:15</td>
+                      <td>俯衝 / 快速甩鏡</td>
+                      <td>空心入網，紅燈在籃板後炸裂，隊友狂奔撲抱</td>
+                      <td>*(吼聲喘息)*</td>
+                      <td>[SFX: 808 重砲轟鳴 + 擦網]</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- 階段 2 -->
+          <div class="case-item">
+            <div class="case-marker">2</div>
+            <div class="case-body">
+              <div class="case-badge">階段二 · motion-prompt-engineer & audio-sound-designer</div>
+              <h3>AI 視訊生片運鏡指令與 130 BPM 音訊卡點</h3>
+              <div class="code-dual-grid">
+                <div class="code-block-card">
+                  <div class="code-title">Shot 03 生片 Prompt (Kling / Runway)</div>
+                  <pre><code>Cinematic 9:16 vertical, 120fps extreme slow-motion 360-degree orbital camera circling athletic Asian basketball player #21 soaring high in mid-air, finger flicking basketball toward hoop, stadium lights creating glowing lens flare halo, sweat drops suspended like diamonds, hyper-realistic anime sakuga aesthetic.</code></pre>
+                </div>
+                <div class="code-block-card">
+                  <div class="code-title">BGM 節奏與 SFX 對位 (Suno & SFX)</div>
+                  <pre><code>BGM: Epic Hybrid Orchestral Trap, 130 BPM.
+00:00.00 -> Deep Sub-bass Drop (開場衝擊)
+00:03.00 -> High-speed Whoosh + Sneaker Squeak
+00:07.00 -> Sudden Mute / Reverb Tail (滯空靜止)
+00:10.80 -> Massive 808 Slam + Glass Shatter (命中爆點)</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 階段 3 -->
+          <div class="case-item">
+            <div class="case-marker">3</div>
+            <div class="case-body">
+              <div class="case-badge">階段三 · video-assembly-pipeline</div>
+              <h3>一鍵 FFmpeg 混音、避讓安全區與彈跳字幕燒錄</h3>
+              <p>符合直式安全區（避開頂部 150px、右側 120px、底部 280px UI 遮擋），並透過 Python 腳本自動執行：</p>
+              <div class="command-box">
+                <code>python .agents/skills/video-assembly-pipeline/scripts/auto_assemble.py -m projects/buzzer_beater/manifest.json -o projects/buzzer_beater/final_master.mp4</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB PAGES 部署教學 (DEPLOY GUIDE) -->
+    <section class="section" id="deploy-guide">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">DEPLOYMENT</span>
+          <h2 class="section-title">GitHub Pages 3 步快速部署上線</h2>
+          <p class="section-desc">本單頁專案為純前端零依賴（Vanilla HTML/CSS/JS）架構，推送到 GitHub 倉庫即可一鍵發布！</p>
+        </div>
+
+        <div class="deploy-steps-grid">
+          <div class="deploy-card">
+            <div class="step-badge">STEP 1</div>
+            <h3>初始化並推送到 GitHub</h3>
+            <p>在專案目錄執行 Git 指令建立倉庫並推送程式碼：</p>
+            <div class="code-snippet">
+              <pre><code>git init
+git add .
+git commit -m "feat: deploy AI Video Skills Portal"
+git branch -M main
+git remote add origin https://github.com/&lt;your-username&gt;/&lt;your-repo-name&gt;.git
+git push -u origin main</code></pre>
+            </div>
+          </div>
+
+          <div class="deploy-card">
+            <div class="step-badge">STEP 2</div>
+            <h3>啟用 GitHub Pages 託管</h3>
+            <p>前往你的 GitHub 專案頁面：</p>
+            <ul class="deploy-list">
+              <li>點擊頂部標籤 <strong>Settings</strong>（設定）。</li>
+              <li>在左側選單中找到 <strong>Pages</strong>。</li>
+              <li>在 <strong>Build and deployment</strong> 區塊下的 <strong>Source</strong> 選擇 <strong>Deploy from a branch</strong>。</li>
+              <li>Branch 選擇 <strong>main</strong>，目錄選擇 <strong>/ (root)</strong>，點擊 <strong>Save</strong>。</li>
+            </ul>
+          </div>
+
+          <div class="deploy-card">
+            <div class="step-badge">STEP 3</div>
+            <h3>立即取得線上訪問網址！</h3>
+            <p>等待約 30 秒 GitHub Actions 自動構建完成，即可透過以下公開網址線上瀏覽：</p>
+            <div class="url-display">
+              <code>https://&lt;your-username&gt;.github.io/&lt;your-repo-name&gt;/</code>
+            </div>
+            <p class="small-tip">支援自訂網域（Custom Domain）與 HTTPS 憑證自動加密！</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 技能詳細資訊彈窗抽屜 (Skill Detail Modal) -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-card" id="modalCard">
+      <button class="modal-close" id="modalClose" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon" id="modalIcon">🎬</div>
+        <div>
+          <h3 class="modal-title" id="modalTitle">Skill Title</h3>
+          <p class="modal-id" id="modalId">skill-id</p>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- 動態注入該 Skill 的完整模式、核心職責與語法範本 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast 通知組件 -->
+  <div class="toast" id="toast">已成功複製到剪貼簿！</div>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p class="footer-title">AI Short Video Skills Suite</p>
+        <p class="footer-sub">Designed for Antigravity & Modern AI Video Creators · Powered by Google Gemini</p>
+      </div>
+      <div class="footer-right">
+        <a href="#pipeline">管線流程</a>
+        <a href="#skills">8大技能庫</a>
+        <a href="#runninghub">RunningHub</a>
+        <a href="#deploy-guide">部署指引</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

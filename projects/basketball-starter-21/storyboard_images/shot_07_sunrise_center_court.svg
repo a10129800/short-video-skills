@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="576" height="1024" viewBox="0 0 576 1024">
+  <defs>
+    <linearGradient id="bgGrad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c120c"/>
+      <stop offset="50%" stop-color="#2a1b0e"/>
+      <stop offset="100%" stop-color="#0c0704"/>
+    </linearGradient>
+    <linearGradient id="goldSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#d97706" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#78350f" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="finalBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="haloRays" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fde68a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="576" height="1024" fill="url(#bgGrad7)"/>
+  <rect x="16" y="16" width="544" height="992" rx="12" fill="none" stroke="#78350f" stroke-width="2"/>
+  
+  <line x1="192" y1="16" x2="192" y2="1008" stroke="#451a03" stroke-width="1" stroke-dasharray="6 6"/>
+  <line x1="384" y1="16" x2="384" y2="1008" stroke="#451a03" stroke-width="1" stroke-dasharray="6 6"/>
+  <line x1="16" y1="341" x2="560" y2="341" stroke="#451a03" stroke-width="1" stroke-dasharray="6 6"/>
+  <line x1="16" y1="682" x2="560" y2="682" stroke="#451a03" stroke-width="1" stroke-dasharray="6 6"/>
+
+  <rect x="32" y="32" width="160" height="42" rx="8" fill="url(#finalBadge)"/>
+  <text x="112" y="59" fill="#0f172a" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="900" text-anchor="middle" letter-spacing="1">SHOT 07</text>
+  
+  <rect x="202" y="32" width="130" height="42" rx="8" fill="#451a03" stroke="#92400e" stroke-width="1"/>
+  <text x="267" y="58" fill="#fde68a" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">00:54 - 01:00</text>
+
+  <rect x="342" y="32" width="202" height="42" rx="8" fill="#78350f" stroke="#f59e0b" stroke-width="1"/>
+  <circle cx="358" cy="53" r="5" fill="#fde68a"/>
+  <text x="444" y="58" fill="#fef3c7" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">OUTRO · 破曉黎明</text>
+
+  <text x="32" y="105" fill="#fef3c7" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700">SLOW DOLLY-IN OVER THE SHOULDER</text>
+  <text x="32" y="128" fill="#d97706" font-family="'Segoe UI', Arial, sans-serif" font-size="13">Angle: Low-Angle Upward Silhouette | Movement: Forward Dolly toward Center Court</text>
+
+  <!-- Illustration -->
+  <rect x="32" y="146" width="512" height="340" rx="12" fill="#1c1008" stroke="#78350f" stroke-width="1.5"/>
+  
+  <!-- Massive Volumetric Sunrise Rays through Cathedral Gym Skylights -->
+  <polygon points="140,146 436,146 544,486 32,486" fill="url(#haloRays)"/>
+  <ellipse cx="288" cy="146" rx="180" ry="60" fill="url(#goldSky)"/>
+
+  <!-- Vast Hardwood Court Floor & Center Court Circle -->
+  <ellipse cx="288" cy="450" rx="160" ry="36" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 6"/>
+  <line x1="32" y1="450" x2="544" y2="450" stroke="#f59e0b" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Lu Zi-xuan Tall Confident Silhouette (Back View, Stepping Forward) -->
+  <path d="M 240 370 L 260 250 L 316 250 L 336 370 L 350 450 L 305 450 L 295 380 L 280 380 L 270 450 L 225 450 Z" fill="#0c0704" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- Bold Gold 21 on the back, now battle-worn but radiant -->
+  <text x="288" y="325" fill="#fde68a" font-family="'Impact', Arial Black, sans-serif" font-size="46" font-weight="bold" text-anchor="middle" letter-spacing="2">21</text>
+  
+  <!-- Left Hand Adjusting Black Wristband -->
+  <path d="M 260 270 L 235 320 L 270 335" fill="none" stroke="#1c1008" stroke-width="12" stroke-linecap="round"/>
+  <rect x="230" y="315" width="16" height="10" rx="2" fill="#000" stroke="#f59e0b" stroke-width="1"/>
+  
+  <!-- Head with spiky hair rim-lit by golden sun -->
+  <circle cx="288" cy="225" r="26" fill="#0c0704" stroke="#fde68a" stroke-width="2"/>
+  
+  <!-- Foot Stepping across Center Line -->
+  <ellipse cx="305" cy="450" rx="14" ry="6" fill="#f59e0b" opacity="0.6"/>
+
+  <!-- Golden Floating Embers & Dust Motes in air -->
+  <circle cx="200" cy="240" r="2.5" fill="#fde68a"/>
+  <circle cx="380" cy="220" r="3" fill="#fde68a"/>
+  <circle cx="240" cy="300" r="1.5" fill="#fde68a"/>
+  <circle cx="340" cy="320" r="2" fill="#fde68a"/>
+
+  <!-- Caption Overlay -->
+  <rect x="44" y="440" width="488" height="36" rx="6" fill="#0c0704" opacity="0.9"/>
+  <text x="288" y="463" fill="#fde68a" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" text-anchor="middle">
+    「這條路，我走了整整三百六十五個黎明。」
+  </text>
+
+  <!-- Technical Specs -->
+  <g transform="translate(32, 502)">
+    <rect x="0" y="0" width="512" height="70" rx="8" fill="#451a03" stroke="#78350f" stroke-width="1"/>
+    <text x="16" y="24" fill="#fde68a" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold">CHARACTER &amp; LIGHTING ANCHOR</text>
+    <text x="16" y="46" fill="#fed7aa" font-family="'Segoe UI', Arial, sans-serif" font-size="12">
+      陸子軒 #21 戰損汗漬球衣背影 ➔ 踏入中圈 | 3200K Majestic Volumetric Golden Sunbeams &amp; Dust Motes
+    </text>
+
+    <rect x="0" y="82" width="512" height="230" rx="8" fill="#1c0f07" stroke="#78350f" stroke-width="1"/>
+    <text x="16" y="106" fill="#4ade80" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold">AI VIDEO PROMPT (VEO 2 / KLING / RUNWAY)</text>
+    <foreignObject x="16" y="116" width="480" height="186">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="color: #fed7aa; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.55; word-break: break-word;">
+        <span style="color: #60a5fa;">[Style]:</span> Epic cinematic sports film still, 35mm film photography, 8k.<br/>
+        <span style="color: #facc15;">[Subject]:</span> 20yo athletic East Asian male basketball player Lu Zi-xuan, back view, wearing battle-weathered black basketball jersey with bold gold number "21".<br/>
+        <span style="color: #f87171;">[Action &amp; Pose]:</span> Tightening black wristband on left wrist, taking a firm resolute step toward center court jump-ball circle, quiet confident heroic silhouette.<br/>
+        <span style="color: #a78bfa;">[Lighting &amp; Grandeur]:</span> Brilliant golden hour sunrise rays flood through cathedral glass skylight, volumetric god rays, dust motes floating in sunbeam, court reflection.<br/>
+        <span style="color: #94a3b8;">[Specs]:</span> Slow Dolly-In Over The Shoulder, Low-Angle Upward, --ar 9:16
+      </div>
+    </foreignObject>
+
+    <rect x="0" y="322" width="512" height="52" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="16" y="342" fill="#f87171" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold">NEGATIVE PROMPT:</text>
+    <text x="16" y="360" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="11">slouching, hesitation, dark gloomy court, washed out lighting, low resolution, blurry</text>
+
+    <rect x="0" y="384" width="512" height="70" rx="8" fill="#451a03" stroke="#b45309" stroke-width="1"/>
+    <text x="16" y="406" fill="#fde68a" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold">AUDIO TRACK (TTS &amp; FOLEY SFX)</text>
+    <text x="16" y="426" fill="#fef3c7" font-family="'Segoe UI', Arial, sans-serif" font-size="12">VO: [calm/epic]「從板凳席到球場中央只有十公尺……這條路，我走了整整三百六十五個黎明。」</text>
+    <text x="16" y="444" fill="#fde68a" font-family="'Segoe UI', Arial, sans-serif" font-size="11">SFX: 球鞋沉穩踩入木地板的空靈迴音 + 史詩交響高潮終章迴音（Reverb Fade）</text>
+  </g>
+
+  <text x="32" y="995" fill="#78350f" font-family="'Segoe UI', Arial, sans-serif" font-size="11">PROJECT: BASKETBALL-STARTER-21 · STORYBOARD IMAGE GENERATOR · 9:16 VERTICAL</text>
+  <text x="544" y="995" fill="#78350f" font-family="'Segoe UI', Arial, sans-serif" font-size="11" text-anchor="end">SLATE 07/07 [FIN]</text>
+</svg>

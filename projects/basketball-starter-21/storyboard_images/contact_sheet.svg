@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1500" viewBox="0 0 2400 1500">
+  <defs>
+    <linearGradient id="csBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a10"/>
+      <stop offset="50%" stop-color="#0f1624"/>
+      <stop offset="100%" stop-color="#05080d"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#ffb703"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2400" height="1500" fill="url(#csBg)"/>
+  
+  <!-- Film Perforations / Aesthetic Borders -->
+  <rect x="24" y="24" width="2352" height="1452" rx="16" fill="none" stroke="#22304a" stroke-width="3"/>
+
+  <!-- Master Header Bar -->
+  <rect x="48" y="48" width="2304" height="120" rx="12" fill="url(#headerGrad)" stroke="#334155" stroke-width="2"/>
+  <text x="80" y="112" fill="url(#goldText)" font-family="'Cinzel', 'Noto Sans TC', sans-serif" font-size="36" font-weight="900" letter-spacing="2">《第二十一號的黎明》全片分鏡聯絡總覽表 (STORYBOARD CONTACT SHEET)</text>
+  <text x="80" y="145" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="16">
+    PROJECT: BASKETBALL-STARTER-21 · TOTAL DURATION: 60 SECONDS · 7 MASTER SHOTS · ASPECT RATIO: 9:16 VERTICAL PREVIS
+  </text>
+  
+  <!-- Top Right Meta Pills -->
+  <g transform="translate(1820, 75)">
+    <rect x="0" y="0" width="160" height="38" rx="8" fill="#e63946" opacity="0.9"/>
+    <text x="80" y="24" fill="#ffffff" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">STORYBOARD SLATE</text>
+    
+    <rect x="175" y="0" width="160" height="38" rx="8" fill="#ffb703"/>
+    <text x="255" y="24" fill="#000000" font-family="'Inter', sans-serif" font-size="14" font-weight="900" text-anchor="middle">4K PIPELINE READY</text>
+    
+    <rect x="350" y="0" width="160" height="38" rx="8" fill="#38bdf8" opacity="0.2" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="430" y="24" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">VEO 2 / KLING</text>
+  </g>
+
+  <!-- Row 1: Shots 01, 02, 03, 04 (Width: 540, Height: 580) -->
+  <!-- Shot 01 Card -->
+  <g transform="translate(56, 195)">
+    <rect width="540" height="580" rx="12" fill="#101726" stroke="#22304a" stroke-width="1.5"/>
+    <rect width="540" height="42" rx="12" fill="#e63946"/>
+    <text x="20" y="27" fill="#fff" font-family="'Inter', sans-serif" font-size="15" font-weight="bold">SHOT 01 · 00:00 - 00:05</text>
+    <text x="520" y="27" fill="#fff" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="end">HOOK · 開場刺痛</text>
+    
+    <!-- Thumbnail Graphic -->
+    <rect x="20" y="56" width="500" height="300" rx="8" fill="#080c14" stroke="#1e293b" stroke-width="1"/>
+    <!-- Illustration content -->
+    <circle cx="440" cy="100" r="30" fill="#ffb703" opacity="0.15"/>
+    <rect x="40" y="230" width="460" height="14" rx="3" fill="#1e293b"/>
+    <path d="M 230 200 L 260 150 L 290 200 L 300 250 L 220 250 Z" fill="#0b0f19" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="265" cy="130" r="18" fill="#141c2b"/>
+    <text x="265" y="225" fill="#ffb703" font-family="'Impact', sans-serif" font-size="32" font-weight="bold" text-anchor="middle">21</text>
+    <text x="265" y="195" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10" text-anchor="middle">ZERO SWEAT</text>
+
+    <!-- Info -->
+    <text x="20" y="380" fill="#ffb703" font-family="'Inter', sans-serif" font-size="15" font-weight="bold">冷板凳最邊緣的無汗戰袍</text>
+    <text x="20" y="402" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">EXTREME CLOSE-UP TO PULL OUT · LOW ANGLE</text>
+    <text x="20" y="432" fill="#e2e8f0" font-family="'Noto Sans TC', sans-serif" font-size="12.5" font-style="italic">「那一年的全場歡呼……我連一滴汗，都沒有資格流。」</text>
+    <rect x="20" y="452" width="500" height="106" rx="6" fill="#0a0e17" stroke="#1e293b" stroke-width="1"/>
+    <text x="32" y="475" fill="#4ade80" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">PROMPT SPEC:</text>
+    <text x="32" y="495" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Cinematic 35mm, Lu Zi-xuan #21 sitting isolated in shadows at bench corner,</text>
+    <text x="32" y="513" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">hands gripping crumpled bottle, pristine bone-dry jersey #21 with gold trim,</text>
+    <text x="32" y="531" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">blurred teammates celebrating in golden confetti shower, rim light --ar 9:16</text>
+  </g>
+
+  <!-- Shot 02 Card -->
+  <g transform="translate(632, 195)">
+    <rect width="540" height="580" rx="12" fill="#101726" stroke="#22304a" stroke-width="1.5"/>
+    <rect width="540" height="42" rx="12" fill="#0284c7"/>
+    <text x="20" y="27" fill="#fff" font-family="'Inter', sans-serif" font-size="15" font-weight="bold">SHOT 02 · 00:05 - 00:12</text>
+    <text x="520" y="27" fill="#fff" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="end">淬煉 · 晨霧滑步</text>
+    
+    <rect x="20" y="56" width="500" height="300" rx="8" fill="#080c14" stroke="#1e293b" stroke-width="1"/>
+    <polygon points="270,56 180,270 360,270" fill="#38bdf8" opacity="0.08"/>
+    <line x1="20" y1="260" x2="520" y2="260" stroke="#334155" stroke-width="1.5"/>
+    <path d="M 270 170 L 220 220 L 170 260 M 270 170 L 320 220 L 370 265" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="270" cy="135" r="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+    <ellipse cx="270" cy="270" rx="80" ry="10" fill="#0284c7" opacity="0.3"/>
+
+    <text x="20" y="380" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="15" font-weight="bold">凌晨五點半的晨霧滑步</text>
+    <text x="20" y="402" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">LOW-ANGLE LATERAL TRACKING · FLOOR LEVEL DUTCH</text>
+    <text x="20" y="432" fill="#e2e8f0" font-family="'Noto Sans TC', sans-serif" font-size="12.5" font-style="italic">「但我不是來這裡……當一輩子觀眾的！」</text>
+    <rect x="20" y="452" width="500" height="106" rx="6" fill="#0a0e17" stroke="#1e293b" stroke-width="1"/>
+    <text x="32" y="475" fill="#4ade80" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">PROMPT SPEC:</text>
+    <text x="32" y="495" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">5:30 AM empty gym, cold blue morning mist, intense defensive sliding steps,</text>
+    <text x="32" y="513" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">rubber sneakers squeaking, heavy sweat dripping from chin onto hardwood,</text>
+    <text x="32" y="531" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">exhaling visible steam in cold air, low angle tracking shot --ar 9:16</text>
+  </g>
+
+  <!-- Shot 03 Card -->
+  <g transform="translate(1208, 195)">
+    <rect width="540" height="580" rx="12" fill="#101726" stroke="#22304a" stroke-width="1.5"/>
+    <rect width="540" height="42" rx="12" fill="#d97706"/>
+    <text x="20" y="27" fill="#fff" font-family="'Inter', sans-serif" font-size="15" font-weight="bold">SHOT 03 · 00:12 - 00:22</text>
+    <text x="520" y="27" fill="#fff" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="end">轉折 · 鐵血棒喝</text>
+    
+    <rect x="20" y="56" width="500" height="300" rx="8" fill="#080c14" stroke="#1e293b" stroke-width="1"/>
+    <!-- Coach figure in shadow -->
+    <path d="M 270 120 C 245 120 225 140 225 170 L 210 270 L 330 270 L 315 170 Z" fill="#09090b" stroke="#71717a" stroke-width="2"/>
+    <circle cx="270" cy="150" r="22" fill="#18181b" stroke="#a1a1aa" stroke-width="1"/>
+    <line x1="260" y1="148" x2="266" y2="148" stroke="#f59e0b" stroke-width="3"/>
+    <line x1="274" y1="148" x2="280" y2="148" stroke="#f59e0b" stroke-width="3"/>
+    <!-- Pointing finger -->
+    <path d="M 220 190 L 170 230" fill="none" stroke="#52525b" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="140" cy="250" r="20" fill="#ef4444" opacity="0.5"/>
+    <line x1="125" y1="245" x2="155" y2="255" stroke="#fecaca" stroke-width="6"/>
+
+    <text x="20" y="380" fill="#fbbf24" font-family="'Inter', sans-serif" font-size="15" font-weight="bold">高教練的鷹隼凝視與血痕</text>
+    <text x="20" y="402" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">MEDIUM SHOT TO PUSH IN · EYE-LEVEL TO LOW</text>
+    <text x="20" y="432" fill="#e2e8f0" font-family="'Noto Sans TC', sans-serif" font-size="12.5" font-style="italic">「如果你不能為這顆球把命拼在地板上，就永遠滾回板凳席！」</text>
+    <rect x="20" y="452" width="500" height="106" rx="6" fill="#0a0e17" stroke="#1e293b" stroke-width="1"/>
+    <text x="32" y="475" fill="#4ade80" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">PROMPT SPEC:</text>
+    <text x="32" y="495" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Coach Gao Zhen-feng in black track jacket standing sternly in gym shadows,</text>
+    <text x="32" y="513" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">sharp falcon eyes, silver whistle, pointing down at bloody scraped knee,</text>
+    <text x="32" y="531" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">basketball motionless on polished floor, dramatic chiaroscuro --ar 9:16</text>
+  </g>
+
+  <!-- Shot 04 Card -->
+  <g transform="translate(1784, 195)">
+    <rect width="540" height="580" rx="12" fill="#101726" stroke="#22304a" stroke-width="1.5"/>
+    <rect width="540" height="42" rx="12" fill="#7c3aed"/>
+    <text x="20" y="27" fill="#fff" font-family="'Inter', sans-serif" font-size="15" font-weight="bold">SHOT 04 · 00:22 - 00:36</text>
+    <text x="520" y="27" fill="#fff" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="end">覺醒 · 瘋狗防守</text>
+    
+    <rect x="20" y="56" width="500" height="300" rx="8" fill="#080c14" stroke="#1e293b" stroke-width="1"/>
+    <line x1="60" y1="180" x2="320" y2="180" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 270 210 L 310 150 L 350 210" fill="none" stroke="#090d16" stroke-width="16" stroke-linecap="round"/>
+    <text x="310" y="200" fill="#ffb703" font-family="'Impact', sans-serif" font-size="24" font-weight="bold" text-anchor="middle">21</text>
+    <path d="M 310 160 L 230 180 L 190 190" fill="none" stroke="#1e293b" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="175" cy="190" r="20" fill="#ea580c" stroke="#c2410c" stroke-width="2"/>
+
+    <text x="20" y="380" fill="#c084fc" font-family="'Inter', sans-serif" font-size="15" font-weight="bold">瘋狗式死亡纏繞與精準切球</text>
+    <text x="20" y="402" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">DYNAMIC ACTION WHIP PAN · LOW-ANGLE TILT</text>
+    <text x="20" y="432" fill="#e2e8f0" font-family="'Noto Sans TC', sans-serif" font-size="12.5" font-style="italic">「投籃會失手，但把對手咬死的防守，永遠不會背叛！」</text>
+    <rect x="20" y="452" width="500" height="106" rx="6" fill="#0a0e17" stroke="#1e293b" stroke-width="1"/>
+    <text x="32" y="475" fill="#4ade80" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">PROMPT SPEC:</text>
+    <text x="32" y="495" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Lu Zi-xuan #21, intense lock-up defense during scrimmage, low stance,</text>
+    <text x="32" y="513" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">lunging forward with explosive arm deflection, fingertips stripping the ball,</text>
+    <text x="32" y="531" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">speed motion blur, arena rim light, flying sweat droplets --ar 9:16</text>
+  </g>
+
+  <!-- Row 2: Shots 05, 06, 07 (Width: 720, Height: 600) -->
+  <!-- Shot 05 Card -->
+  <g transform="translate(56, 810)">
+    <rect width="720" height="610" rx="12" fill="#14060a" stroke="#881337" stroke-width="1.5"/>
+    <rect width="720" height="42" rx="12" fill="#ef4444"/>
+    <text x="24" y="27" fill="#fff" font-family="'Inter', sans-serif" font-size="15" font-weight="bold">SHOT 05 · 00:36 - 00:48</text>
+    <text x="696" y="27" fill="#fff" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="end">CLIMAX · 平飛救球撞翻技術台</text>
+    
+    <rect x="24" y="56" width="672" height="320" rx="8" fill="#090204" stroke="#4c0519" stroke-width="1"/>
+    <!-- Crash visuals -->
+    <polygon points="500,280 580,220 640,310 540,330" fill="#27272a" stroke="#71717a" stroke-width="2"/>
+    <path d="M 120 220 L 280 200 L 440 190" fill="none" stroke="#0f172a" stroke-width="32" stroke-linecap="round"/>
+    <path d="M 120 220 L 280 200 L 440 190" fill="none" stroke="#ffb703" stroke-width="3"/>
+    <text x="280" y="208" fill="#ffb703" font-family="'Impact', sans-serif" font-size="30" font-weight="bold" text-anchor="middle">21</text>
+    <path d="M 440 190 L 490 170" fill="none" stroke="#1e293b" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="510" cy="165" r="22" fill="#ea580c" stroke="#c2410c" stroke-width="2"/>
+    <!-- Motion arch -->
+    <path d="M 510 165 Q 400 90 240 110" fill="none" stroke="#f43f5e" stroke-width="3" stroke-dasharray="6 6"/>
+
+    <text x="24" y="405" fill="#f43f5e" font-family="'Inter', sans-serif" font-size="16" font-weight="bold">橫身平飛出界撞翻技術台鐵椅</text>
+    <text x="24" y="428" fill="#fda4af" font-family="'Inter', sans-serif" font-size="12.5" font-weight="600">120FPS SLOW-MOTION CRASH ZOOM · LOW FLOOR ANGLE</text>
+    <text x="24" y="458" fill="#ffe4e6" font-family="'Noto Sans TC', sans-serif" font-size="13" font-style="italic">「橫身救球！不可思議！壓哨絕殺——！！」</text>
+    <rect x="24" y="480" width="672" height="106" rx="6" fill="#1c050b" stroke="#881337" stroke-width="1"/>
+    <text x="36" y="504" fill="#4ade80" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">PROMPT SPEC:</text>
+    <text x="36" y="524" fill="#fecdd3" font-family="'Inter', sans-serif" font-size="11.5">Lu Zi-xuan #21, airborne horizontal dive parallel to hardwood court outside boundary line,</text>
+    <text x="36" y="542" fill="#fecdd3" font-family="'Inter', sans-serif" font-size="11.5">veins bulging on forearm, one hand scooping loose ball, crashing through courtside table and chairs,</text>
+    <text x="36" y="560" fill="#fecdd3" font-family="'Inter', sans-serif" font-size="11.5">flying water bottles, 120fps slow-motion crash zoom, floodlights --ar 9:16</text>
+  </g>
+
+  <!-- Shot 06 Card -->
+  <g transform="translate(826, 810)">
+    <rect width="720" height="610" rx="12" fill="#141c2b" stroke="#ca8a04" stroke-width="1.5"/>
+    <rect width="720" height="42" rx="12" fill="#eab308"/>
+    <text x="24" y="27" fill="#000" font-family="'Inter', sans-serif" font-size="15" font-weight="bold">SHOT 06 · 00:48 - 00:54</text>
+    <text x="696" y="27" fill="#000" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="end">加冕 · 先發五人名單</text>
+    
+    <rect x="24" y="56" width="672" height="320" rx="8" fill="#080f1a" stroke="#1e293b" stroke-width="1"/>
+    <!-- Whiteboard -->
+    <rect x="80" y="85" width="280" height="250" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+    <rect x="90" y="95" width="260" height="26" fill="#0284c7" rx="3"/>
+    <text x="220" y="113" fill="#fff" font-family="'Inter', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">FINAL GAME STARTER 5</text>
+    <text x="105" y="145" fill="#334155" font-family="'Inter', sans-serif" font-size="12">PG: #4 陳浩天</text>
+    <text x="105" y="165" fill="#334155" font-family="'Inter', sans-serif" font-size="12">SG: #7 林敬</text>
+    <text x="105" y="185" fill="#334155" font-family="'Inter', sans-serif" font-size="12">PF: #11 郭遠</text>
+    <text x="105" y="205" fill="#334155" font-family="'Inter', sans-serif" font-size="12">C: #15 趙磊</text>
+    <rect x="98" y="225" width="244" height="45" rx="4" fill="#fef08a" stroke="#eab308" stroke-width="2"/>
+    <text x="110" y="254" fill="#000" font-family="'Impact', sans-serif" font-size="20">SF: #21 陸子軒</text>
+
+    <!-- Emotional Player in back -->
+    <circle cx="500" cy="180" r="40" fill="#1e293b" stroke="#fef08a" stroke-width="2"/>
+    <circle cx="488" cy="175" r="4" fill="#38bdf8"/>
+    <circle cx="512" cy="175" r="4" fill="#38bdf8"/>
+
+    <text x="24" y="405" fill="#fde047" font-family="'Inter', sans-serif" font-size="16" font-weight="bold">白板上黑筆寫下的「#21 陸子軒」</text>
+    <text x="24" y="428" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="12.5" font-weight="600">MACRO RACK FOCUS TILT-UP · EYE-LEVEL MACRO</text>
+    <text x="24" y="458" fill="#fef9c3" font-family="'Noto Sans TC', sans-serif" font-size="13" font-style="italic">「陸子軒，明天開場跳球，去把你的球場拿下來！」</text>
+    <rect x="24" y="480" width="672" height="106" rx="6" fill="#1b1705" stroke="#ca8a04" stroke-width="1"/>
+    <text x="36" y="504" fill="#4ade80" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">PROMPT SPEC:</text>
+    <text x="36" y="524" fill="#fed7aa" font-family="'Inter', sans-serif" font-size="11.5">Macro shot of coach hand writing boldly on whiteboard '#21 LU ZI-XUAN (SF STARTER)',</text>
+    <text x="36" y="542" fill="#fed7aa" font-family="'Inter', sans-serif" font-size="11.5">tilts up to Lu Zi-xuan in back row with reddened emotional eyes and clenched fists,</text>
+    <text x="36" y="560" fill="#fed7aa" font-family="'Inter', sans-serif" font-size="11.5">golden morning sunlight through window blinds with floating dust motes --ar 9:16</text>
+  </g>
+
+  <!-- Shot 07 Card -->
+  <g transform="translate(1596, 810)">
+    <rect width="720" height="610" rx="12" fill="#1c1008" stroke="#b45309" stroke-width="1.5"/>
+    <rect width="720" height="42" rx="12" fill="#f59e0b"/>
+    <text x="24" y="27" fill="#000" font-family="'Inter', sans-serif" font-size="15" font-weight="bold">SHOT 07 · 00:54 - 01:00</text>
+    <text x="696" y="27" fill="#000" font-family="'Inter', sans-serif" font-size="13" font-weight="bold" text-anchor="end">OUTRO · 破曉黎明 [終幕]</text>
+    
+    <rect x="24" y="56" width="672" height="320" rx="8" fill="#0a0502" stroke="#451a03" stroke-width="1"/>
+    <!-- Sunbeams -->
+    <polygon points="120,56 550,56 672,376 24,376" fill="#fde68a" opacity="0.15"/>
+    <!-- Silhouette -->
+    <path d="M 310 270 L 330 150 L 390 150 L 410 270 L 425 350 L 380 350 L 370 280 L 350 280 L 340 350 L 295 350 Z" fill="#000" stroke="#f59e0b" stroke-width="2"/>
+    <circle cx="360" cy="120" r="28" fill="#000" stroke="#fde68a" stroke-width="2"/>
+    <text x="360" y="235" fill="#fde68a" font-family="'Impact', sans-serif" font-size="46" font-weight="bold" text-anchor="middle">21</text>
+
+    <text x="24" y="405" fill="#f59e0b" font-family="'Inter', sans-serif" font-size="16" font-weight="bold">晨光傾瀉踏入中圈跳球區</text>
+    <text x="24" y="428" fill="#fed7aa" font-family="'Inter', sans-serif" font-size="12.5" font-weight="600">SLOW DOLLY-IN OVER THE SHOULDER · LOW-ANGLE UPWARD</text>
+    <text x="24" y="458" fill="#fef3c7" font-family="'Noto Sans TC', sans-serif" font-size="13" font-style="italic">「從板凳席到球場中央只有十公尺……這條路，我走了整整三百六十五個黎明。」</text>
+    <rect x="24" y="480" width="672" height="106" rx="6" fill="#291205" stroke="#78350f" stroke-width="1"/>
+    <text x="36" y="504" fill="#4ade80" font-family="'Inter', sans-serif" font-size="11" font-weight="bold">PROMPT SPEC:</text>
+    <text x="36" y="524" fill="#fed7aa" font-family="'Inter', sans-serif" font-size="11.5">Brilliant golden sunrise light streaming through glass skylight, god rays illuminating</text>
+    <text x="36" y="542" fill="#fed7aa" font-family="'Inter', sans-serif" font-size="11.5">weathered sweat-stained black jersey #21, Lu Zi-xuan tightening black wristband,</text>
+    <text x="36" y="560" fill="#fed7aa" font-family="'Inter', sans-serif" font-size="11.5">stepping resolutely toward center court circle, quiet confident heroic silhouette --ar 9:16</text>
+  </g>
+
+  <!-- Global Footer -->
+  <text x="48" y="1465" fill="#64748b" font-family="'Inter', sans-serif" font-size="13">
+    STORYBOARD IMAGE GENERATOR PIPELINE · GENERATED FOR ANTIGRAVITY IDE · ARTIFACT KEYFRAME READY
+  </text>
+  <text x="2352" y="1465" fill="#64748b" font-family="'Inter', sans-serif" font-size="13" text-anchor="end">
+    MANIFEST: storyboard_manifest.json · STATUS: READY FOR MOTION PROMPT &amp; AI VIDEO GENERATION
+  </text>
+</svg>

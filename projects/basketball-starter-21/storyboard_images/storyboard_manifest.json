@@ -1,0 +1,139 @@
+{
+  "project_name": "basketball_starter_21_storyboard",
+  "project_title": "第二十一號的黎明：從板凳席到先發五人",
+  "aspect_ratio": "9:16",
+  "total_shots": 7,
+  "master_style": "Cinematic sports film aesthetic, 35mm film photography, highly detailed, dramatic chiaroscuro rim lighting, sweat droplets, motion blur, photorealistic 8k",
+  "character_roster": [
+    {
+      "name": "陸子軒 (Lu Zi-xuan)",
+      "number": 21,
+      "position": "SF (小前鋒 / 先發第五人)",
+      "reference_image": "C:/Users/mice/.gemini/antigravity-ide/brain/a522136e-dcc0-43ab-adc0-0799183b46a9/.user_uploaded/media_1788937381978.jpg",
+      "visual_anchor": "20yo handsome athletic East Asian male basketball player Lu Zi-xuan, messy black layered hair, athletic muscular build, wearing black basketball jersey #21 with red and gold trim, black compression knee tights, black left wristband, red-black-white high-top sneakers"
+    },
+    {
+      "name": "高振峰 (Coach Gao Zhen-feng)",
+      "position": "總教練 (Head Coach)",
+      "reference_image": "C:/Users/mice/.gemini/antigravity-ide/brain/a522136e-dcc0-43ab-adc0-0799183b46a9/.user_uploaded/media_1788937381957.jpg",
+      "visual_anchor": "40yo mature East Asian male basketball coach Gao Zhen-feng, neat short black hair, clean facial stubble, sharp observant falcon eyes, wearing black track jacket with bold red and gold shoulder panels, silver whistle on chest, holding tactical whiteboard"
+    },
+    {
+      "name": "陳浩天 (Chen Hao-tian)",
+      "number": 4,
+      "position": "PG (隊長 / 控球後衛)",
+      "visual_anchor": "21yo serious East Asian male point guard Chen Hao-tian #4, buzz cut with eyebrow slit, commanding aura, wearing black #4 jersey with red-gold trim, white basketball sneakers"
+    },
+    {
+      "name": "林敬 (Lin Jing)",
+      "number": 7,
+      "position": "SG (得分後衛 / 神射手)",
+      "visual_anchor": "20yo slender East Asian male shooting guard Lin Jing #7, wavy black hair, calm expression, wearing black #7 jersey with red-gold trim, black compression arm sleeves"
+    },
+    {
+      "name": "趙磊 (Zhao Lei)",
+      "number": 15,
+      "position": "C (先發中鋒 / 禁區守護神)",
+      "visual_anchor": "22yo massive 203cm East Asian male center Zhao Lei #15, muscular heavyweight build, buzz cut, wearing black #15 jersey with red-gold trim, heavy knee pads"
+    },
+    {
+      "name": "雷震 (Lei Zhen)",
+      "number": 0,
+      "position": "SG (烈風隊王牌得分王 / 宿敵)",
+      "visual_anchor": "20yo arrogant athletic East Asian basketball star Lei Zhen #0, spiky hair with subtle silver highlights, wearing white and purple #0 jersey, neon arm sleeve"
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": 1,
+      "name": "shot_01_bench_edge",
+      "timecode": "00:00 - 00:05",
+      "shot_type": "Extreme Close-Up to Pull Out",
+      "camera_angle": "Low Angle",
+      "image_file": "shot_01_bench_edge.svg",
+      "keyframe_purpose": "Hook 開場：冷板凳邊緣的孤寂與乾淨無汗的21號球衣",
+      "character_featured": ["陸子軒 #21"],
+      "action_prompt": "sitting isolated in deep shadows at far corner of team bench, hands gripping crumpled clear plastic water bottle into mesh bag, pristine untouched clean black jersey with bold gold number 21 without any sweat, background out of focus teammates celebrating under golden confetti shower",
+      "final_prompt": "Cinematic sports film aesthetic, 35mm film photography, highly detailed, dramatic chiaroscuro rim lighting, 20yo handsome athletic East Asian male basketball player Lu Zi-xuan, messy black layered hair, muscular build, wearing black basketball jersey #21 with red and gold trim, sitting isolated in deep shadows at far corner of team bench, hands gripping crumpled clear plastic water bottle into mesh bag, pristine untouched clean black jersey with bold gold number 21 without any sweat, background out of focus teammates celebrating under golden confetti shower, Extreme Close-Up to Pull Out, Low Angle, High contrast stadium floodlights, volumetric atmospheric lighting, cold blue shadows, 8k resolution --ar 9:16",
+      "negative_prompt": "blurry, sweaty jersey, smiling, cartoon, deformed fingers, extra limbs, bad anatomy, text, watermark"
+    },
+    {
+      "shot_id": 2,
+      "name": "shot_02_dawn_mist_slide",
+      "timecode": "00:05 - 00:12",
+      "shot_type": "Low-Angle Tracking Shot",
+      "camera_angle": "Floor Level Dutch Angle",
+      "image_file": "shot_02_dawn_mist_slide.svg",
+      "keyframe_purpose": "起承：凌晨五點半晨霧中孤獨的窒息防守滑步",
+      "character_featured": ["陸子軒 #21"],
+      "action_prompt": "5:30 AM empty indoor gymnasium, cold blue morning mist, intense defensive sliding steps low to reflective hardwood floor, rubber sneakers squeaking and gripping polished floor, heavy sweat dripping from chin creating dark spots on wood, exhaling visible steam in cold air",
+      "final_prompt": "Cinematic sports film aesthetic, 35mm film photography, 20yo handsome athletic East Asian male basketball player Lu Zi-xuan in black jersey #21 and black leg tights, red-black-white high-top sneakers, 5:30 AM empty indoor gymnasium, cold blue morning mist, intense defensive sliding steps low to reflective hardwood floor, rubber sneakers squeaking, heavy sweat dripping from chin creating dark spots on wood, exhaling visible steam in cold air, Low-Angle Tracking Shot, Floor Level Dutch Angle, single ceiling spotlight rim lighting, high contrast, 8k resolution --ar 9:16",
+      "negative_prompt": "crowd, daytime, bright sunny, clean dry skin, static pose, deformed shoes, cartoon"
+    },
+    {
+      "shot_id": 3,
+      "name": "shot_03_coach_rebuke",
+      "timecode": "00:12 - 00:22",
+      "shot_type": "Medium Shot to Push In",
+      "camera_angle": "Eye-level to Low Angle",
+      "image_file": "shot_03_coach_rebuke.svg",
+      "keyframe_purpose": "轉折：高教練鷹隼般的當頭棒喝與膝蓋滲血繃帶",
+      "character_featured": ["高振峰教練", "陸子軒 #21"],
+      "action_prompt": "40yo mature East Asian coach Gao Zhen-feng in black track jacket with red-gold shoulder stripes standing sternly in gym shadows, neat short black hair and clean facial stubble, sharp falcon eyes glaring with intense discipline, silver whistle around neck, holding white tactical clipboard, pointing down at bloody scraped knee bandage on Lu Zi-xuan, basketball resting on court",
+      "final_prompt": "Cinematic sports film aesthetic, 35mm film photography, 40yo mature East Asian male basketball coach Gao Zhen-feng, neat short black hair, clean facial stubble, sharp observant falcon eyes, wearing black track jacket with bold red and gold shoulder panels, silver whistle on chest, holding white tactical clipboard, pointing down at bloody scraped knee bandage on player Lu Zi-xuan #21, basketball resting on polished wood floor, Medium Shot to Push In, dramatic moody chiaroscuro lighting, 8k resolution --ar 9:16",
+      "negative_prompt": "smiling, friendly, crowded court, bright lighting, anime chibi, cartoonish, low resolution"
+    },
+    {
+      "shot_id": 4,
+      "name": "shot_04_defensive_crossover",
+      "timecode": "00:22 - 00:36",
+      "shot_type": "Dynamic Action Whip Pan",
+      "camera_angle": "Low-angle Action Tilt",
+      "image_file": "shot_04_defensive_crossover.svg",
+      "keyframe_purpose": "覺醒：瘋狗防守，極限橫移精準切球",
+      "character_featured": ["陸子軒 #21", "陳浩天 #4"],
+      "action_prompt": "intense lock-up defense during team scrimmage, Lu Zi-xuan staying in low stance anticipating captain Chen Hao-tian crossover, lunging forward with explosive arm deflection, fingertips stripping the basketball cleanly, floor reflections and motion blur",
+      "final_prompt": "Cinematic sports film aesthetic, 35mm film photography, 20yo athletic East Asian basketball player Lu Zi-xuan #21, messy black hair, intense defense lock-up against point guard Chen Hao-tian #4 during team scrimmage, staying in low stance, lunging forward with explosive arm deflection, fingertips stripping the basketball cleanly, floor reflections and dynamic motion blur, Dynamic Action Whip Pan, Low-angle Action Tilt, harsh arena rim lighting, sweat droplets flying, 8k resolution --ar 9:16",
+      "negative_prompt": "lazy defense, standing straight, blurry ball, disjointed limbs, extra fingers, cartoon"
+    },
+    {
+      "shot_id": 5,
+      "name": "shot_05_diving_save_crash",
+      "timecode": "00:36 - 00:48",
+      "shot_type": "120fps Slow-Motion Crash Zoom",
+      "camera_angle": "Low Floor-Level Dynamic Angle",
+      "image_file": "shot_05_diving_save_crash.svg",
+      "keyframe_purpose": "高潮爆發：八強賽橫身平飛出界救球，撞翻技術台鐵椅",
+      "character_featured": ["陸子軒 #21", "雷震 #0 (宿敵)"],
+      "action_prompt": "airborne horizontal dive parallel to hardwood court outside boundary line, veins bulging on forearm, one hand scooping loose basketball back onto court after blocking rival ace Lei Zhen, body crashing through courtside press table and metal folding chairs, flying water bottles and papers",
+      "final_prompt": "Cinematic sports film aesthetic, 35mm film photography, 20yo athletic East Asian basketball player Lu Zi-xuan #21 in black jersey and black knee tights, airborne horizontal dive parallel to hardwood court outside boundary line, veins bulging on forearm, one hand scooping loose basketball back onto court, body crashing through courtside press table and metal folding chairs, flying water bottles and papers, 120fps Slow-Motion Crash Zoom, Low Floor-Level Dynamic Angle, high intensity arena floodlights, photorealistic 8k --ar 9:16",
+      "negative_prompt": "standing, calm expression, safe landing, missing limbs, bad physics, static frame, deformed hands"
+    },
+    {
+      "shot_id": 6,
+      "name": "shot_06_whiteboard_starter",
+      "timecode": "00:48 - 00:54",
+      "shot_type": "Macro Rack Focus Tilt-Up",
+      "camera_angle": "Eye-level Macro",
+      "image_file": "shot_06_whiteboard_starter.svg",
+      "keyframe_purpose": "加冕時刻：戰術會議室白板寫下 SF #21 陸子軒先發名單",
+      "character_featured": ["高振峰教練", "陸子軒 #21", "趙磊 #15", "林敬 #7"],
+      "action_prompt": "morning sunlight cutting through locker room blinds, coach Gao Zhen-feng holding black marker writing on clean whiteboard bold text '#21 LU ZI-XUAN (SF)', camera tilts up to Lu Zi-xuan in back row with reddened emotional teary eyes and clenched fists, teammates applauding and cheering around him",
+      "final_prompt": "Cinematic sports film aesthetic, 35mm film photography, morning sunlight cutting through locker room blinds, coach Gao Zhen-feng in black track jacket holding black marker writing on clean whiteboard bold text '#21 LU ZI-XUAN (SF)', camera tilts up to 20yo Lu Zi-xuan in back row with reddened emotional teary eyes and clenched fists, teammates applauding and cheering around him, Macro Rack Focus Tilt-Up, Eye-level Macro, warm golden light with dust motes, 8k resolution --ar 9:16",
+      "negative_prompt": "misspelled name, shaky handwriting, dark room, frowning teammates, blurry, cartoon"
+    },
+    {
+      "shot_id": 7,
+      "name": "shot_07_sunrise_center_court",
+      "timecode": "00:54 - 01:00",
+      "shot_type": "Slow Dolly-In Over The Shoulder",
+      "camera_angle": "Low-Angle Upward",
+      "image_file": "shot_07_sunrise_center_court.svg",
+      "keyframe_purpose": "終幕破曉：破曉晨光照耀21號戰袍，堅毅踏入球場中圈",
+      "character_featured": ["陸子軒 #21"],
+      "action_prompt": "brilliant golden hour sunrise light streaming through high glass skylight, god rays illuminating weathered sweat-stained black jersey with bold gold number #21, Lu Zi-xuan tightening black wristband on left wrist and stepping resolutely toward center court jump ball circle, quiet confident heroic silhouette",
+      "final_prompt": "Cinematic sports film aesthetic, 35mm film photography, brilliant golden hour sunrise light streaming through high glass skylight, god rays illuminating weathered sweat-stained black jersey with bold gold number #21, 20yo athletic East Asian player Lu Zi-xuan tightening black wristband on left wrist and stepping resolutely toward center court jump ball circle, quiet confident heroic silhouette, Slow Dolly-In Over The Shoulder, Low-Angle Upward, majestic volumetric lighting, 8k resolution --ar 9:16",
+      "negative_prompt": "slouching, hesitation, dark gloomy court, washed out lighting, low resolution, blurry"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="576" height="1024" viewBox="0 0 576 1024">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0e14"/>
+      <stop offset="50%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#090a0f"/>
+    </linearGradient>
+    <linearGradient id="amberBadge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="576" height="1024" fill="url(#bgGrad3)"/>
+  <rect x="16" y="16" width="544" height="992" rx="12" fill="none" stroke="#27272a" stroke-width="2"/>
+  
+  <line x1="192" y1="16" x2="192" y2="1008" stroke="#1c1917" stroke-width="1" stroke-dasharray="6 6"/>
+  <line x1="384" y1="16" x2="384" y2="1008" stroke="#1c1917" stroke-width="1" stroke-dasharray="6 6"/>
+  <line x1="16" y1="341" x2="560" y2="341" stroke="#1c1917" stroke-width="1" stroke-dasharray="6 6"/>
+  <line x1="16" y1="682" x2="560" y2="682" stroke="#1c1917" stroke-width="1" stroke-dasharray="6 6"/>
+
+  <rect x="32" y="32" width="160" height="42" rx="8" fill="url(#amberBadge)"/>
+  <text x="112" y="59" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="900" text-anchor="middle" letter-spacing="1">SHOT 03</text>
+  
+  <rect x="202" y="32" width="130" height="42" rx="8" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+  <text x="267" y="58" fill="#a1a1aa" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">00:12 - 00:22</text>
+
+  <rect x="342" y="32" width="202" height="42" rx="8" fill="#451a03" stroke="#f59e0b" stroke-width="1"/>
+  <circle cx="358" cy="53" r="5" fill="#f59e0b"/>
+  <text x="444" y="58" fill="#f59e0b" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">轉折 · 鐵血棒喝</text>
+
+  <text x="32" y="105" fill="#f4f4f5" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700">MEDIUM SHOT TO PUSH IN</text>
+  <text x="32" y="128" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="13">Angle: Eye-Level to Low Angle | Movement: Slow Push-in toward Falcon Eyes</text>
+
+  <!-- Illustration -->
+  <rect x="32" y="146" width="512" height="340" rx="12" fill="#1c1917" stroke="#3f3f46" stroke-width="1.5"/>
+  
+  <!-- Chiaroscuro Coach Figure in shadow -->
+  <!-- Coach Gao silhouette -->
+  <path d="M 288 190 C 260 190 240 210 240 240 L 220 380 L 356 380 L 336 240 C 336 210 316 190 288 190 Z" fill="#09090b" stroke="#71717a" stroke-width="2"/>
+  <!-- Head with buzz cut and stubble -->
+  <circle cx="288" cy="225" r="28" fill="#18181b" stroke="#a1a1aa" stroke-width="1"/>
+  <!-- Sharp eyes glowing with intensity -->
+  <line x1="274" y1="223" x2="282" y2="223" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+  <line x1="294" y1="223" x2="302" y2="223" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+  <!-- Silver whistle on chest -->
+  <path d="M 288 253 L 284 290 L 292 290 Z" fill="#e4e4e7" stroke="#71717a" stroke-width="1"/>
+  <!-- Coach hand pointing downward at bloody knee -->
+  <path d="M 230 280 L 190 320 L 150 370" fill="none" stroke="#27272a" stroke-width="16" stroke-linecap="round"/>
+  <polygon points="140,380 160,360 150,390" fill="#f59e0b"/>
+
+  <!-- Foreground: Bloody Bandage on Scraped Knee -->
+  <circle cx="130" cy="420" r="36" fill="#18181b" stroke="#ef4444" stroke-width="2"/>
+  <line x1="110" y1="410" x2="150" y2="430" stroke="#fca5a5" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="130" cy="420" r="6" fill="#dc2626"/>
+
+  <!-- Basketball on Floor -->
+  <circle cx="420" cy="430" r="28" fill="#ea580c" stroke="#9a3412" stroke-width="2"/>
+  <path d="M 392 430 Q 420 405 448 430 M 392 430 Q 420 455 448 430" fill="none" stroke="#7c2d12" stroke-width="2"/>
+
+  <!-- Caption Overlay -->
+  <rect x="44" y="440" width="488" height="36" rx="6" fill="#09090b" opacity="0.9"/>
+  <text x="288" y="463" fill="#f4f4f5" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" text-anchor="middle">
+    「如果你不能為這顆球把命拼在地上，那這座球場，永遠沒有你的位置！」
+  </text>
+
+  <!-- Technical Specs -->
+  <g transform="translate(32, 502)">
+    <rect x="0" y="0" width="512" height="70" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="16" y="24" fill="#fbbf24" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold">CHARACTER &amp; LIGHTING ANCHOR</text>
+    <text x="16" y="46" fill="#a1a1aa" font-family="'Segoe UI', Arial, sans-serif" font-size="12">
+      高振峰教練 (40yo, Buzz-cut, Falcon Eyes) | Extreme Low-Key Chiaroscuro Shadow, Single Overhead Spotlight
+    </text>
+
+    <rect x="0" y="82" width="512" height="230" rx="8" fill="#141417" stroke="#27272a" stroke-width="1"/>
+    <text x="16" y="106" fill="#4ade80" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold">AI VIDEO PROMPT (VEO 2 / KLING / RUNWAY)</text>
+    <foreignObject x="16" y="116" width="480" height="186">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="color: #e4e4e7; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.55; word-break: break-word;">
+        <span style="color: #60a5fa;">[Style]:</span> Cinematic sports drama aesthetic, 35mm film still, photorealistic 8k.<br/>
+        <span style="color: #facc15;">[Subject]:</span> 40yo mature East Asian coach Gao Zhen-feng in black track jacket with red stripes, buzz-cut, clean stubble, standing sternly in gym shadows.<br/>
+        <span style="color: #f87171;">[Composition &amp; Action]:</span> Sharp falcon eyes glaring with intense discipline, silver whistle, pointing finger down at bloody scraped knee bandage on player Lu Zi-xuan.<br/>
+        <span style="color: #a78bfa;">[Lighting]:</span> Dramatic deep chiaroscuro rim lighting, high contrast shadows.<br/>
+        <span style="color: #94a3b8;">[Specs]:</span> Medium Shot to Push-In, Eye-level to Low Angle, --ar 9:16
+      </div>
+    </foreignObject>
+
+    <rect x="0" y="322" width="512" height="52" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="16" y="342" fill="#f87171" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold">NEGATIVE PROMPT:</text>
+    <text x="16" y="360" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="11">smiling, friendly, crowded court, bright lighting, anime chibi, cartoonish, low resolution</text>
+
+    <rect x="0" y="384" width="512" height="70" rx="8" fill="#2e1065" stroke="#7c3aed" stroke-width="1"/>
+    <text x="16" y="406" fill="#a78bfa" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold">AUDIO TRACK (TTS &amp; FOLEY SFX)</text>
+    <text x="16" y="426" fill="#ddd6fe" font-family="'Segoe UI', Arial, sans-serif" font-size="12">VO: [firm/deep]「球隊不缺得分手！如果你不敢把命拼在地板上，就永遠滾回板凳席！」</text>
+    <text x="16" y="444" fill="#c4b5fd" font-family="'Segoe UI', Arial, sans-serif" font-size="11">SFX: 籃球拍地悶響空靈回音 + 壓迫心跳重低音（Heartbeat Sub-bass）</text>
+  </g>
+
+  <text x="32" y="995" fill="#52525b" font-family="'Segoe UI', Arial, sans-serif" font-size="11">PROJECT: BASKETBALL-STARTER-21 · STORYBOARD IMAGE GENERATOR · 9:16 VERTICAL</text>
+  <text x="544" y="995" fill="#52525b" font-family="'Segoe UI', Arial, sans-serif" font-size="11" text-anchor="end">SLATE 03/07</text>
+</svg>

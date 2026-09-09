@@ -1,0 +1,133 @@
+{
+  "project_name": "basketball_starter_21_dawn",
+  "title": "第二十一號的黎明：從板凳最末端到先發五人",
+  "resolution": {
+    "width": 1080,
+    "height": 1920
+  },
+  "fps": 60,
+  "shots": [
+    {
+      "shot_id": 1,
+      "file": "shot_01.mp4",
+      "duration_sec": 4.0,
+      "description": "金色彩帶落下與板凳邊緣撿瓶子對比"
+    },
+    {
+      "shot_id": 2,
+      "file": "shot_02.mp4",
+      "duration_sec": 4.0,
+      "description": "凌晨五點半晨霧空曠球館一人運球衝刺"
+    },
+    {
+      "shot_id": 3,
+      "file": "shot_03.mp4",
+      "duration_sec": 3.0,
+      "description": "加壓褲膝蓋劇烈顫抖與汗水滴落特寫"
+    },
+    {
+      "shot_id": 4,
+      "file": "shot_04.mp4",
+      "duration_sec": 4.0,
+      "description": "高教練鐵壁大火鍋扇飛與滑摔"
+    },
+    {
+      "shot_id": 5,
+      "file": "shot_05.mp4",
+      "duration_sec": 4.0,
+      "description": "手肘擦傷趴地眼神從沮喪轉為冰冷野性"
+    },
+    {
+      "shot_id": 6,
+      "file": "shot_06.mp4",
+      "duration_sec": 4.0,
+      "description": "咬牙爬起壓低重心全場窒息防守架勢"
+    },
+    {
+      "shot_id": 7,
+      "file": "shot_07.mp4",
+      "duration_sec": 4.0,
+      "description": "球鞋急停煞車與負重深蹲快節奏蒙太奇"
+    },
+    {
+      "shot_id": 8,
+      "file": "shot_08.mp4",
+      "duration_sec": 4.0,
+      "description": "八強生死戰落後14分教練回頭指向替補席"
+    },
+    {
+      "shot_id": 9,
+      "file": "shot_09.mp4",
+      "duration_sec": 4.0,
+      "description": "暴風扯掉熱身服露出黑底紅金21號戰袍"
+    },
+    {
+      "shot_id": 10,
+      "file": "shot_10.mp4",
+      "duration_sec": 4.0,
+      "description": "全場死亡纏繞黏死對手當家得分王"
+    },
+    {
+      "shot_id": 11,
+      "file": "shot_11.mp4",
+      "duration_sec": 4.0,
+      "description": "極限魚躍水平飛出邊線單手救球"
+    },
+    {
+      "shot_id": 12,
+      "file": "shot_12.mp4",
+      "duration_sec": 4.0,
+      "description": "撞翻技術台擋板隊友快攻單手劈扣"
+    },
+    {
+      "shot_id": 13,
+      "file": "shot_13.mp4",
+      "duration_sec": 4.0,
+      "description": "隊友拉起滿身傷痕露齒燦爛笑容"
+    },
+    {
+      "shot_id": 14,
+      "file": "shot_14.mp4",
+      "duration_sec": 4.0,
+      "description": "白板微距書寫SF先發第五人陸子軒"
+    },
+    {
+      "shot_id": 15,
+      "file": "shot_15.mp4",
+      "duration_sec": 3.0,
+      "description": "破曉晨光打在胸前21號球衣"
+    },
+    {
+      "shot_id": 16,
+      "file": "shot_16.mp4",
+      "duration_sec": 2.0,
+      "description": "繫緊護腕踏入中圈跳球區回眸轉黑幕"
+    }
+  ],
+  "audio": {
+    "voiceover": {
+      "file": "voiceover_master.mp3",
+      "volume": 1.0
+    },
+    "bgm": {
+      "file": "bgm_epic_hybrid_136bpm.mp3",
+      "volume": 0.28,
+      "ducking_reduction_db": 5.5,
+      "fade_out_sec": 1.5
+    },
+    "sfx": {
+      "file": "sfx_master_track.wav",
+      "volume": 0.85
+    }
+  },
+  "subtitles": {
+    "file": "subtitles.srt",
+    "font_name": "Impact",
+    "font_size": 22,
+    "primary_color": "&H00FFFFFF",
+    "outline_color": "&H00000000",
+    "outline": 2.5,
+    "margin_v": 200,
+    "alignment": 2
+  }
+}

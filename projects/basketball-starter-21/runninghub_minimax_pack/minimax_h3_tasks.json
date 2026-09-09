@@ -1,0 +1,87 @@
+{
+  "generator": "MiniMax-H3 / Hailuo Video-01",
+  "project": "basketball_starter_21",
+  "aspect_ratio": "9:16",
+  "recommended_resolution": "720x1280",
+  "character_assets": {
+    "lu_zixuan_21": {
+      "name": "陸子軒",
+      "number": "21",
+      "role": "SF",
+      "reference_path": "C:/Users/mice/.gemini/antigravity-ide/brain/a522136e-dcc0-43ab-adc0-0799183b46a9/.user_uploaded/media_1788937381978.jpg",
+      "tag": "20yo East Asian male athlete, messy black hair, black jersey #21 with red-gold trim, knee tights, red-black sneakers"
+    },
+    "coach_gao": {
+      "name": "高振峰教練",
+      "role": "Head Coach",
+      "reference_path": "C:/Users/mice/.gemini/antigravity-ide/brain/a522136e-dcc0-43ab-adc0-0799183b46a9/.user_uploaded/media_1788937381957.jpg",
+      "tag": "40yo East Asian male coach, short buzz hair with stubble, black track jacket with red-gold trim, silver whistle"
+    }
+  },
+  "shots": [
+    {
+      "shot_id": 1,
+      "name": "bench_edge_isolation",
+      "character_ref": "lu_zixuan_21",
+      "first_frame_ref": "C:/Users/mice/.gemini/antigravity-ide/brain/1f6a814c-25ec-4c13-95db-7b33004f8b24/bench_twentyone_confetti_1788934999288.jpg",
+      "camera": "Slow pull-out from low angle",
+      "prompt_en": "Low angle slow pull-out. Lu Zi-xuan in black jersey #21 sits alone in bench shadows, hands squeezing plastic bottle into net bag. Clean sweatless jersey. Distant teammates celebrate under golden confetti. High-contrast arena lighting.",
+      "prompt_zh": "低角度緩慢拉遠鏡頭。陸子軒穿著乾淨的21號黑球衣孤單坐在長椅陰影中，雙手捏緊塑料瓶塞入網袋。遠處隊友在金色彩帶狂歡，高反差球館光影。",
+      "duration": 5
+    },
+    {
+      "shot_id": 2,
+      "name": "dawn_mist_slide",
+      "character_ref": "lu_zixuan_21",
+      "camera": "Low-angle lateral tracking",
+      "prompt_en": "Low-angle fast lateral tracking shot. 5:30 AM mist in empty gymnasium. Lu Zi-xuan executes rapid defensive sliding steps across reflective court, sneakers squeaking, heavy breath steam in cold air.",
+      "prompt_zh": "貼地低角度快速橫向跟鏡。清晨五點半晨霧球館，陸子軒在反光木地板劇烈防守滑步，球鞋摩擦急停，口中吐出白霧喘息。",
+      "duration": 5
+    },
+    {
+      "shot_id": 3,
+      "name": "coach_scolding",
+      "character_ref": "coach_gao",
+      "camera": "Medium push-in to close-up",
+      "prompt_en": "Medium shot slowly pushing in. Coach Gao in black track jacket with red-gold trim stands sternly, sharp eagle eyes glaring, holding clipboard, pointing down at player's scraped bloody knee bandage. Dark gym shadows.",
+      "prompt_zh": "中景緩慢推鏡。高教練穿黑底紅金夾克嚴厲肅立，鷹隼眼神凝視，手持戰術夾板指著球員滲血的膝蓋繃帶。沉重光影。",
+      "duration": 5
+    },
+    {
+      "shot_id": 4,
+      "name": "defensive_steal",
+      "character_ref": "lu_zixuan_21",
+      "camera": "Action whip pan with low tilt",
+      "prompt_en": "Action whip pan shot. Lu Zi-xuan in low defensive stance locks up opposing guard during practice, lunging forward with explosive reach, fingertips cleanly slapping basketball away with court motion blur.",
+      "prompt_zh": "高速甩鏡動作特寫。陸子軒壓低防守重心封堵控衛突破，迅猛伸手精準切球，木地板倒影與動態殘影。",
+      "duration": 4
+    },
+    {
+      "shot_id": 5,
+      "name": "horizontal_diving_save",
+      "character_ref": "lu_zixuan_21",
+      "camera": "Dynamic crash zoom, 120fps slow-motion",
+      "prompt_en": "120fps slow-motion crash zoom. Lu Zi-xuan dives horizontally parallel to court, scooping out-of-bounds basketball back in mid-air, crashing into press tables and folding chairs, bottles flying.",
+      "prompt_zh": "120幀高速慢動作俯衝特寫。陸子軒橫身平飛出界，空中單手撈回籃球，隨後撞翻技術台鐵椅，水瓶飛濺。",
+      "duration": 5
+    },
+    {
+      "shot_id": 6,
+      "name": "starter_whiteboard",
+      "character_ref": "coach_gao",
+      "camera": "Macro rack focus tilt-up",
+      "prompt_en": "Macro shot tilting up from whiteboard. Black marker writing '#21 LU ZI-XUAN (SF)'. Camera pans to Lu Zi-xuan in back row with teary determined eyes as teammates cheer. Warm morning sunbeams.",
+      "prompt_zh": "微距上搖鏡頭。白板黑筆書寫「#21 陸子軒(SF)」，鏡頭移至後排眼眶泛紅的陸子軒，隊友拍桌歡呼，百葉窗晨曦金光。",
+      "duration": 5
+    },
+    {
+      "shot_id": 7,
+      "name": "sunrise_center_court",
+      "character_ref": "lu_zixuan_21",
+      "camera": "Slow dolly-in over-the-shoulder",
+      "prompt_en": "Slow dolly-in over shoulder. Back view of Lu Zi-xuan in sweat-stained #21 jersey adjusting left wristband, stepping firmly into jump-ball circle. Volumetric golden sunrise rays streaming from ceiling.",
+      "prompt_zh": "過肩緩慢推進。背對鏡頭的陸子軒穿著汗濕21號球衣調整左護腕，邁步踏入中圈跳球區。金色晨曦光柱傾瀉。",
+      "duration": 5
+    }
+  ]
+}

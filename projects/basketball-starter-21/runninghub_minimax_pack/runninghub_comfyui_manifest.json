@@ -1,0 +1,73 @@
+{
+  "platform": "RunningHub (ComfyUI Cloud)",
+  "recommended_workflow": "Reference-to-Video / MiniMax Video-01 I2V Node",
+  "workflow_nodes_mapping": {
+    "LoadImage_RoleRef": {
+      "slot_1": "char_lu_zixuan_21.jpg",
+      "slot_2": "char_coach_gao.jpg",
+      "source_paths": [
+        "C:/Users/mice/.gemini/antigravity-ide/brain/a522136e-dcc0-43ab-adc0-0799183b46a9/.user_uploaded/media_1788937381978.jpg",
+        "C:/Users/mice/.gemini/antigravity-ide/brain/a522136e-dcc0-43ab-adc0-0799183b46a9/.user_uploaded/media_1788937381957.jpg"
+      ]
+    },
+    "LoadImage_StartFrame": {
+      "slot_shot01": "C:/Users/mice/.gemini/antigravity-ide/brain/1f6a814c-25ec-4c13-95db-7b33004f8b24/bench_twentyone_confetti_1788934999288.jpg"
+    },
+    "CLIPTextEncode_Negative": {
+      "text": "blurry, deformed limbs, extra fingers, cartoon, smooth plastic skin, floating bodies, distorted text, low frame rate"
+    },
+    "VideoSamplerSettings": {
+      "resolution": "720x1280",
+      "aspect_ratio": "9:16",
+      "motion_bucket_id": 127,
+      "fps": 25,
+      "steps": 30,
+      "cfg": 6.0
+    }
+  },
+  "shot_queue": [
+    {
+      "id": "Shot_01",
+      "ref_image": "media_1788937381978.jpg",
+      "first_frame": "bench_twentyone_confetti_1788934999288.jpg",
+      "prompt": "Low angle slow pull-out. Lu Zi-xuan #21 sits in bench shadows squeezing water bottle. Clean jersey. Blurred celebration with golden confetti in background.",
+      "motion_intensity": "Medium"
+    },
+    {
+      "id": "Shot_02",
+      "ref_image": "media_1788937381978.jpg",
+      "prompt": "Low-angle fast lateral tracking. 5:30 AM mist. Lu Zi-xuan performs rapid defensive slides on hardwood court, sneakers squeaking, cold air steam breath.",
+      "motion_intensity": "High"
+    },
+    {
+      "id": "Shot_03",
+      "ref_image": "media_1788937381957.jpg",
+      "prompt": "Medium shot pushing in. Coach Gao in black-red-gold jacket points down sternly at player's bloody knee bandage on polished court. Chiaroscuro gym lighting.",
+      "motion_intensity": "Low"
+    },
+    {
+      "id": "Shot_04",
+      "ref_image": "media_1788937381978.jpg",
+      "prompt": "Dynamic action whip pan. Low stance defense lock-up. Explosive forward lunge slapping basketball away cleanly with motion streaks.",
+      "motion_intensity": "Very High"
+    },
+    {
+      "id": "Shot_05",
+      "ref_image": "media_1788937381978.jpg",
+      "prompt": "120fps slow-motion crash zoom. Airborne horizontal dive parallel to floor scooping ball, crashing through folding chairs and press table.",
+      "motion_intensity": "Extreme"
+    },
+    {
+      "id": "Shot_06",
+      "ref_image": "media_1788937381957.jpg",
+      "prompt": "Macro rack-focus tilt up from whiteboard '#21 LU ZI-XUAN (SF)' to teary determined Lu Zi-xuan, teammates celebrating in morning light beams.",
+      "motion_intensity": "Medium"
+    },
+    {
+      "id": "Shot_07",
+      "ref_image": "media_1788937381978.jpg",
+      "prompt": "Slow dolly-in over shoulder. Back view of player in sweat-stained #21 jersey adjusting wristband, stepping into center court jump circle under golden rays.",
+      "motion_intensity": "Slow"
+    }
+  ]
+}

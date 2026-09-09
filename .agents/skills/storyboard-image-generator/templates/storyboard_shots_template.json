@@ -1,0 +1,42 @@
+{
+  "project_name": "buzzer_beater_short",
+  "aspect_ratio": "9:16",
+  "master_style": "Cinematic anime aesthetic, Studio MAPPA line-art, vibrant dynamic colors, sharp focus, 8k render, dramatic cinematic lighting",
+  "character_anchor": "An athletic 20yo East Asian male basketball player, messy black spiky hair, wearing black #21 basketball jersey with white trims",
+  "lighting_anchor": "Warm golden hour stadium light with high contrast volumetric rim highlights",
+  "negative_prompt_global": "blurry, deformed face, cartoonish, extra limbs, bad anatomy, text, watermark, mutated hands, multiple heads",
+  "shots": [
+    {
+      "shot_id": 1,
+      "name": "shot_01_bench_exhaustion",
+      "shot_type": "Medium Shot",
+      "camera_angle": "Eye-level",
+      "action_prompt": "sitting exhausted on empty bench beside hardwood court boundary, chest heaving, glistening sweat beads rolling down cheeks, eyes sharp and burning with fierce determination",
+      "negative_prompt": "smiling, relaxed, pristine jersey"
+    },
+    {
+      "shot_id": 2,
+      "name": "shot_02_intense_eyes",
+      "shot_type": "Extreme Close-up",
+      "camera_angle": "Low-angle",
+      "action_prompt": "extreme close-up focused on his intense dilated pupil reflecting red scoreboard buzzer numbers, heavy sweat drops falling from chin, harsh rim lighting",
+      "negative_prompt": "blurry, smooth plastic skin, double eyes"
+    },
+    {
+      "shot_id": 3,
+      "name": "shot_03_explosive_drive",
+      "shot_type": "Low-angle Dynamic Full Shot",
+      "camera_angle": "Dutch Angle",
+      "action_prompt": "explosive low crossover drive on reflective hardwood court, defender stumbling in blurred background, speed motion blur, rubber shoe friction sparks",
+      "negative_prompt": "floating, deformed legs, extra ball, distorted floor"
+    },
+    {
+      "shot_id": 4,
+      "name": "shot_04_midair_release",
+      "shot_type": "High-angle Freeze Action",
+      "camera_angle": "High-angle",
+      "action_prompt": "suspended gracefully high in mid-air releasing basketball towards net, stadium arena floodlights creating radiant halo ring, floating airborne dust particles",
+      "negative_prompt": "bad hands, extra fingers, warped basketball, morphing body"
+    }
+  ]
+}

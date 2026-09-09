@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="576" height="1024" viewBox="0 0 576 1024">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="50%" stop-color="#121824"/>
+      <stop offset="100%" stop-color="#080b10"/>
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e63946"/>
+      <stop offset="100%" stop-color="#d62828"/>
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffb703" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fb8500" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="visGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c2538"/>
+      <stop offset="100%" stop-color="#0f1624"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="576" height="1024" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Safety Border -->
+  <rect x="16" y="16" width="544" height="992" rx="12" fill="none" stroke="#253047" stroke-width="2"/>
+  
+  <!-- Rule of Thirds Guide Lines (Subtle) -->
+  <line x1="192" y1="16" x2="192" y2="1008" stroke="#182030" stroke-width="1" stroke-dasharray="6 6"/>
+  <line x1="384" y1="16" x2="384" y2="1008" stroke="#182030" stroke-width="1" stroke-dasharray="6 6"/>
+  <line x1="16" y1="341" x2="560" y2="341" stroke="#182030" stroke-width="1" stroke-dasharray="6 6"/>
+  <line x1="16" y1="682" x2="560" y2="682" stroke="#182030" stroke-width="1" stroke-dasharray="6 6"/>
+
+  <!-- Header Section -->
+  <rect x="32" y="32" width="160" height="42" rx="8" fill="url(#badgeGrad)"/>
+  <text x="112" y="59" fill="#ffffff" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="900" text-anchor="middle" letter-spacing="1">SHOT 01</text>
+  
+  <rect x="202" y="32" width="130" height="42" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="267" y="58" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">00:00 - 00:05</text>
+
+  <rect x="342" y="32" width="202" height="42" rx="8" fill="#0f172a" stroke="#ffb703" stroke-width="1"/>
+  <circle cx="358" cy="53" r="5" fill="#ffb703"/>
+  <text x="444" y="58" fill="#ffb703" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">HOOK · 開場刺痛</text>
+
+  <!-- Framing & Camera Info -->
+  <text x="32" y="105" fill="#e2e8f0" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700">EXTREME CLOSE-UP TO PULL OUT</text>
+  <text x="32" y="128" fill="#64748b" font-family="'Segoe UI', Arial, sans-serif" font-size="13">Angle: Low-Angle Shadow | Movement: Slow Dolly-Out &amp; Rack Focus</text>
+
+  <!-- Visual Previs Illustration Container -->
+  <rect x="32" y="146" width="512" height="340" rx="12" fill="url(#visGrad)" stroke="#334155" stroke-width="1.5"/>
+  
+  <!-- Stylized Visual Graphics: Bench + Isolated Figure + Confetti Background -->
+  <!-- Golden Confetti in background -->
+  <circle cx="450" cy="180" r="3" fill="#ffb703" opacity="0.8"/>
+  <circle cx="480" cy="220" r="4" fill="#fb8500" opacity="0.7"/>
+  <circle cx="420" cy="250" r="2.5" fill="#ffd166" opacity="0.9"/>
+  <circle cx="500" cy="190" r="3.5" fill="#ffb703" opacity="0.6"/>
+  <circle cx="460" cy="280" r="3" fill="#fb8500" opacity="0.5"/>
+  <!-- Arena Lights glow -->
+  <ellipse cx="460" cy="170" rx="80" ry="40" fill="url(#goldGlow)"/>
+  
+  <!-- Bench Plank -->
+  <rect x="40" y="380" width="496" height="24" rx="4" fill="#1e2533" stroke="#2a3547" stroke-width="1"/>
+  <rect x="120" y="404" width="20" height="70" fill="#151b26"/>
+  <rect x="440" y="404" width="20" height="70" fill="#151b26"/>
+
+  <!-- Isolated Player Silhouette on Bench -->
+  <!-- Back/Torso #21 -->
+  <path d="M 180 340 L 220 280 L 270 280 L 300 340 L 310 420 L 170 420 Z" fill="#0c1017" stroke="#38455e" stroke-width="2"/>
+  <!-- Head Bowed -->
+  <circle cx="245" cy="250" r="28" fill="#151c27" stroke="#38455e" stroke-width="1.5"/>
+  <!-- Arm holding water bottle -->
+  <path d="M 280 340 L 300 390 L 290 410" fill="none" stroke="#2a364a" stroke-width="12" stroke-linecap="round"/>
+  <!-- Water bottle -->
+  <rect x="282" y="395" width="16" height="30" rx="4" fill="#38bdf8" opacity="0.4" stroke="#7dd3fc" stroke-width="1.5"/>
+  <!-- Pristine Jersey Number 21 in bold Gold -->
+  <text x="245" y="375" fill="#ffb703" font-family="'Impact', Arial Black, sans-serif" font-size="44" font-weight="bold" text-anchor="middle" letter-spacing="2">21</text>
+  <text x="245" y="335" fill="#e2e8f0" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="3">ZERO SWEAT</text>
+
+  <!-- Ground Shadow & Net Bag -->
+  <ellipse cx="250" cy="460" rx="140" ry="16" fill="#05070a" opacity="0.8"/>
+  <circle cx="150" cy="445" r="22" fill="#c1121f" opacity="0.6"/>
+  <circle cx="180" cy="440" r="20" fill="#c1121f" opacity="0.7"/>
+
+  <!-- Keyframe Caption Overlay -->
+  <rect x="44" y="440" width="488" height="36" rx="6" fill="#090d14" opacity="0.9"/>
+  <text x="288" y="463" fill="#cbd5e1" font-family="'Segoe UI', Arial, sans-serif" font-size="13" text-anchor="middle">
+    「那一年的全場歡呼……我連一滴汗，都沒有資格流。」
+  </text>
+
+  <!-- Technical Breakdown Spec Cards -->
+  <g transform="translate(32, 502)">
+    <!-- Anchor Box -->
+    <rect x="0" y="0" width="512" height="70" rx="8" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+    <text x="16" y="24" fill="#38bdf8" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold">CHARACTER &amp; LIGHTING ANCHOR</text>
+    <text x="16" y="46" fill="#9ca3af" font-family="'Segoe UI', Arial, sans-serif" font-size="12">
+      陸子軒 #21 (20yo, Messy Black Hair, Clean Black/Gold Jersey) | 4500K Cold Bleacher Shadow
+    </text>
+
+    <!-- Prompt Box -->
+    <rect x="0" y="82" width="512" height="230" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="16" y="106" fill="#4ade80" font-family="'Segoe UI', Arial, sans-serif" font-size="12" font-weight="bold">AI VIDEO PROMPT (VEO 2 / KLING / RUNWAY)</text>
+    
+    <foreignObject x="16" y="116" width="480" height="186">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="color: #cbd5e1; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; line-height: 1.55; word-break: break-word;">
+        <span style="color: #60a5fa;">[Style]:</span> Cinematic sports film aesthetic, 35mm film photography, 8k.<br/>
+        <span style="color: #facc15;">[Subject]:</span> 20yo athletic East Asian male basketball player Lu Zi-xuan #21, sitting isolated in deep shadows at bench corner, hands gripping crumpled clear plastic water bottle.<br/>
+        <span style="color: #f87171;">[Details]:</span> Pristine untouched bone-dry black jersey with bold gold number 21, completely unmarred by sweat, clenched jaw.<br/>
+        <span style="color: #a78bfa;">[Background]:</span> Out-of-focus teammates celebrating under glittering golden confetti storm, arena lights flare.<br/>
+        <span style="color: #94a3b8;">[Specs]:</span> Low-Angle Macro to Pull-Out, dramatic rim light, --ar 9:16
+      </div>
+    </foreignObject>
+
+    <!-- Negative Prompt Box -->
+    <rect x="0" y="322" width="512" height="52" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="16" y="342" fill="#f87171" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold">NEGATIVE PROMPT:</text>
+    <text x="16" y="360" fill="#71717a" font-family="'Segoe UI', Arial, sans-serif" font-size="11">blurry, sweaty jersey, smiling, cartoon, deformed fingers, extra limbs, bad anatomy, text, watermark</text>
+
+    <!-- Audio / Foley Card -->
+    <rect x="0" y="384" width="512" height="70" rx="8" fill="#172554" stroke="#1d4ed8" stroke-width="1"/>
+    <text x="16" y="406" fill="#60a5fa" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="bold">AUDIO TRACK (TTS &amp; FOLEY SFX)</text>
+    <text x="16" y="426" fill="#bfdbfe" font-family="'Segoe UI', Arial, sans-serif" font-size="12">VO: [whisper/cold]「那一年的全場歡呼……我連一滴汗，都沒有資格流。」</text>
+    <text x="16" y="444" fill="#93c5fd" font-family="'Segoe UI', Arial, sans-serif" font-size="11">SFX: 塑料水瓶捏癟扭曲聲 + 遠處模糊蜂鳴與歡呼消散音</text>
+  </g>
+
+  <!-- Footer Info -->
+  <text x="32" y="995" fill="#475569" font-family="'Segoe UI', Arial, sans-serif" font-size="11">PROJECT: BASKETBALL-STARTER-21 · STORYBOARD IMAGE GENERATOR · 9:16 VERTICAL</text>
+  <text x="544" y="995" fill="#475569" font-family="'Segoe UI', Arial, sans-serif" font-size="11" text-anchor="end">SLATE 01/07</text>
+</svg>

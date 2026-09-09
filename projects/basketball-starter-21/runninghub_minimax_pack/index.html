@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RunningHub / MiniMax H3 參考生視頻資產包</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #090c13;
+      --bg-card: #131926;
+      --border: #232d42;
+      --gold: #ffb703;
+      --cyan: #38bdf8;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-dark);
+      color: var(--text);
+      font-family: 'Inter', 'Noto Sans TC', sans-serif;
+      padding: 32px 24px;
+      line-height: 1.6;
+    }
+    .container { max-width: 1440px; margin: 0 auto; }
+    .header {
+      background: #101624;
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .title { font-size: 24px; font-weight: 900; color: #fff; }
+    .subtitle { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+    
+    /* Character Shelf */
+    .char-shelf {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .char-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    .char-thumb {
+      width: 72px;
+      height: 96px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid var(--gold);
+      background: #000;
+      flex-shrink: 0;
+    }
+    .char-info h4 { font-size: 15px; font-weight: 800; color: #fff; }
+    .char-info p { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .char-info .badge {
+      display: inline-block;
+      margin-top: 6px;
+      background: rgba(255, 183, 3, 0.15);
+      color: var(--gold);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* Shot Grid */
+    .shots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 20px;
+    }
+    .shot-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .shot-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 10px;
+    }
+    .shot-tag { font-size: 14px; font-weight: 800; color: var(--gold); }
+    .shot-cam { font-size: 12px; color: var(--cyan); font-weight: 600; }
+    .prompt-box {
+      background: #0b0f19;
+      border: 1px solid #1c2438;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 12px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+    .btn-group { display: flex; gap: 8px; margin-top: auto; }
+    .btn {
+      flex: 1;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #f1f5f9;
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: var(--gold); color: #000; border-color: var(--gold); }
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10b981;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s;
+      z-index: 99;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 class="title">🎬 RunningHub / MiniMax H3 參考生片資產包</h1>
+        <p class="subtitle">專案：第二十一號的黎明 · 9:16 直式短影音 · 簡明動作運鏡提示詞 (50%精簡版)</p>
+      </div>
+      <div>
+        <button class="btn" style="padding: 10px 18px; background: var(--gold); color: #000;" onclick="copyAllJSON()">📋 複製完整 Task JSON</button>
+      </div>
+    </div>
+
+    <!-- Character Shelf -->
+    <div class="char-shelf">
+      <div class="char-card">
+        <img class="char-thumb" src="../../../../../../brain/a522136e-dcc0-43ab-adc0-0799183b46a9/.user_uploaded/media_1788937381978.jpg" alt="陸子軒">
+        <div class="char-info">
+          <h4>陸子軒 (Lu Zi-xuan)</h4>
+          <p>#21 SF / 20歲 / 黑色紅金邊球衣</p>
+          <span class="badge">RunningHub Role Ref 1</span>
+        </div>
+      </div>
+      <div class="char-card">
+        <img class="char-thumb" src="../../../../../../brain/a522136e-dcc0-43ab-adc0-0799183b46a9/.user_uploaded/media_1788937381957.jpg" alt="高振峰教練">
+        <div class="char-info">
+          <h4>高振峰 (Coach Gao)</h4>
+          <p>總教練 / 40歲 / 黑底紅金夾克+口哨</p>
+          <span class="badge">RunningHub Role Ref 2</span>
+        </div>
+      </div>
+      <div class="char-card">
+        <img class="char-thumb" src="../../../../../../brain/1f6a814c-25ec-4c13-95db-7b33004f8b24/bench_twentyone_confetti_1788934999288.jpg" alt="Shot 01 首幀">
+        <div class="char-info">
+          <h4>Shot 01 專用首幀 (Keyframe)</h4>
+          <p>板凳角落+彩帶背景 (I2V 起始幀)</p>
+          <span class="badge" style="background: rgba(56,189,248,0.15); color: var(--cyan);">Start Frame</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shots Grid -->
+    <div class="shots-grid">
+      <!-- Shot 1 -->
+      <div class="shot-card">
+        <div class="shot-head">
+          <span class="shot-tag">SHOT 01 · 孤獨板凳</span>
+          <span class="shot-cam">Low Angle Slow Pull-out</span>
+        </div>
+        <div class="prompt-box" id="p1_en">Low angle slow pull-out. Lu Zi-xuan in black jersey #21 sits alone in bench shadows, hands squeezing plastic bottle into net bag. Clean sweatless jersey. Distant teammates celebrate under golden confetti. High-contrast arena lighting.</div>
+        <div class="prompt-box" id="p1_zh" style="color: #93c5fd;">低角度緩慢拉遠鏡頭。陸子軒穿著乾淨的21號黑球衣孤單坐在長椅陰影中，雙手捏緊塑料瓶塞入網袋。遠處隊友在金色彩帶狂歡，高反差球館光影。</div>
+        <div class="btn-group">
+          <button class="btn" onclick="copy('p1_en')">複製英文 (MiniMax H3)</button>
+          <button class="btn" onclick="copy('p1_zh')">複製中文</button>
+        </div>
+      </div>
+
+      <!-- Shot 2 -->
+      <div class="shot-card">
+        <div class="shot-head">
+          <span class="shot-tag">SHOT 02 · 晨霧滑步</span>
+          <span class="shot-cam">Low-angle Lateral Tracking</span>
+        </div>
+        <div class="prompt-box" id="p2_en">Low-angle fast lateral tracking shot. 5:30 AM mist in empty gymnasium. Lu Zi-xuan executes rapid defensive sliding steps across reflective court, sneakers squeaking, heavy breath steam in cold air.</div>
+        <div class="prompt-box" id="p2_zh" style="color: #93c5fd;">貼地低角度快速橫向跟鏡。清晨五點半晨霧球館，陸子軒在反光木地板劇烈防守滑步，球鞋摩擦急停，口中吐出白霧喘息。</div>
+        <div class="btn-group">
+          <button class="btn" onclick="copy('p2_en')">複製英文 (MiniMax H3)</button>
+          <button class="btn" onclick="copy('p2_zh')">複製中文</button>
+        </div>
+      </div>
+
+      <!-- Shot 3 -->
+      <div class="shot-card">
+        <div class="shot-head">
+          <span class="shot-tag">SHOT 03 · 鐵血棒喝</span>
+          <span class="shot-cam">Medium Push-in to Close-up</span>
+        </div>
+        <div class="prompt-box" id="p3_en">Medium shot slowly pushing in. Coach Gao in black track jacket with red-gold trim stands sternly, sharp eagle eyes glaring, holding clipboard, pointing down at player's scraped bloody knee bandage. Dark gym shadows.</div>
+        <div class="prompt-box" id="p3_zh" style="color: #93c5fd;">中景緩慢推鏡。高教練穿黑底紅金夾克嚴厲肅立，鷹隼眼神凝視，手持戰術夾板指著球員滲血的膝蓋繃帶。沉重光影。</div>
+        <div class="btn-group">
+          <button class="btn" onclick="copy('p3_en')">複製英文 (MiniMax H3)</button>
+          <button class="btn" onclick="copy('p3_zh')">複製中文</button>
+        </div>
+      </div>
+
+      <!-- Shot 4 -->
+      <div class="shot-card">
+        <div class="shot-head">
+          <span class="shot-tag">SHOT 04 · 瘋狗切球</span>
+          <span class="shot-cam">Action Whip Pan</span>
+        </div>
+        <div class="prompt-box" id="p4_en">Action whip pan shot. Lu Zi-xuan in low defensive stance locks up opposing guard during practice, lunging forward with explosive reach, fingertips cleanly slapping basketball away with court motion blur.</div>
+        <div class="prompt-box" id="p4_zh" style="color: #93c5fd;">高速甩鏡動作特寫。陸子軒壓低防守重心封堵控衛突破，迅猛伸手精準切球，木地板倒影與動態殘影。</div>
+        <div class="btn-group">
+          <button class="btn" onclick="copy('p4_en')">複製英文 (MiniMax H3)</button>
+          <button class="btn" onclick="copy('p4_zh')">複製中文</button>
+        </div>
+      </div>
+
+      <!-- Shot 5 -->
+      <div class="shot-card">
+        <div class="shot-head">
+          <span class="shot-tag">SHOT 05 · 平飛撲救</span>
+          <span class="shot-cam">120fps Crash Zoom</span>
+        </div>
+        <div class="prompt-box" id="p5_en">120fps slow-motion crash zoom. Lu Zi-xuan dives horizontally parallel to court, scooping out-of-bounds basketball back in mid-air, crashing into press tables and folding chairs, bottles flying.</div>
+        <div class="prompt-box" id="p5_zh" style="color: #93c5fd;">120幀高速慢動作俯衝特寫。陸子軒橫身平飛出界，空中單手撈回籃球，隨後撞翻技術台鐵椅，水瓶飛濺。</div>
+        <div class="btn-group">
+          <button class="btn" onclick="copy('p5_en')">複製英文 (MiniMax H3)</button>
+          <button class="btn" onclick="copy('p5_zh')">複製中文</button>
+        </div>
+      </div>
+
+      <!-- Shot 6 -->
+      <div class="shot-card">
+        <div class="shot-head">
+          <span class="shot-tag">SHOT 06 · 先發白板</span>
+          <span class="shot-cam">Macro Tilt-up</span>
+        </div>
+        <div class="prompt-box" id="p6_en">Macro shot tilting up from whiteboard. Black marker writing '#21 LU ZI-XUAN (SF)'. Camera pans to Lu Zi-xuan in back row with teary determined eyes as teammates cheer. Warm morning sunbeams.</div>
+        <div class="prompt-box" id="p6_zh" style="color: #93c5fd;">微距上搖鏡頭。白板黑筆書寫「#21 陸子軒(SF)」，鏡頭移至後排眼眶泛紅的陸子軒，隊友拍桌歡呼，百葉窗晨曦金光。</div>
+        <div class="btn-group">
+          <button class="btn" onclick="copy('p6_en')">複製英文 (MiniMax H3)</button>
+          <button class="btn" onclick="copy('p6_zh')">複製中文</button>
+        </div>
+      </div>
+
+      <!-- Shot 7 -->
+      <div class="shot-card">
+        <div class="shot-head">
+          <span class="shot-tag">SHOT 07 · 破曉中圈</span>
+          <span class="shot-cam">Slow Dolly-in</span>
+        </div>
+        <div class="prompt-box" id="p7_en">Slow dolly-in over shoulder. Back view of Lu Zi-xuan in sweat-stained #21 jersey adjusting left wristband, stepping firmly into jump-ball circle. Volumetric golden sunrise rays streaming from ceiling.</div>
+        <div class="prompt-box" id="p7_zh" style="color: #93c5fd;">過肩緩慢推進。背對鏡頭的陸子軒穿著汗濕21號球衣調整左護腕，邁步踏入中圈跳球區。金色晨曦光柱傾瀉。</div>
+        <div class="btn-group">
+          <button class="btn" onclick="copy('p7_en')">複製英文 (MiniMax H3)</button>
+          <button class="btn" onclick="copy('p7_zh')">複製中文</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">已複製到剪貼簿！</div>
+
+  <script>
+    function copy(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast("已複製提示詞！");
+      });
+    }
+
+    function copyAllJSON() {
+      fetch('minimax_h3_tasks.json')
+        .then(r => r.text())
+        .then(t => {
+          navigator.clipboard.writeText(t).then(() => showToast("已複製完整 JSON！"));
+        })
+        .catch(() => showToast("請直接開啟 minimax_h3_tasks.json 複製"));
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerText = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2000);
+    }
+  </script>
+</body>
+</html>
