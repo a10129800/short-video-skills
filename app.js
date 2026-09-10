@@ -3,7 +3,7 @@
  * Handles data rendering, dynamic filtering, modal detail views, and clipboard copies.
  */
 
-// 8 大 Skills 完整資料庫（含核心職責、多種模式、學派預設與公式）
+// 9 大 Skills 完整資料庫（含核心職責、多種模式、學派預設與公式）
 const SKILLS_DATA = [
   {
     id: "short-video-director",
@@ -282,6 +282,46 @@ const SKILLS_DATA = [
         </div>
       `
     }
+  },
+  {
+    id: "songwriting-producer",
+    name: "歌曲創作與音樂製作專家",
+    category: "audio-post",
+    icon: "🎵",
+    desc: "為短片打造專屬原創主題曲與配樂。掌控歌詞工程學（雙音韻/內嵌韻）、和弦走向配置（4536251/卡農/小室）與 Suno / Udio / MiniMax Music 3 專用生成代碼。",
+    modes: ["歌詞工程與押韻排版", "和弦走向與旋律骨架", "Suno v3.5/v4 專用標籤", "MiniMax Music 3 防死音", "Udio v1.5 風格提示詞"],
+    fullDetails: {
+      overview: "負責將短片的情感故事、核心衝突或視覺情境，轉譯為具備「高記憶點旋律、標準黃金段落、專業歌詞押韻結構」的原創歌曲資產，並輸出零失誤的 AI 音樂提示詞與段落標籤代碼。",
+      modesTitle: "五大核心創作模組",
+      modesList: [
+        {
+          name: "1. 歌詞工程與黃金段落結構 (Lyric Architecture)",
+          desc: "標準流行歌曲結構（[Intro] -> [Verse 1/2] -> [Pre-Chorus] -> [Chorus] -> [Bridge] -> [Outro]），十三轍諧音雙音韻與句中內嵌韻。"
+        },
+        {
+          name: "2. 經典和弦走向庫 (Classic Progressions)",
+          desc: "4536251 華語流行黃金走向、15634145 卡農走向、6451 日漫熱血小室走向、2516 R&B Neo-Soul 靈魂爵士和弦。"
+        },
+        {
+          name: "3. Suno AI (v3.5 / v4) 結構標籤代碼",
+          desc: "Style Prompt 英文風格與樂器標籤堆疊，歌詞框支援 [Guitar Solo]、[Bass Drop]、[Key Change] 等表演指示標籤。"
+        },
+        {
+          name: "4. MiniMax Music 3 (海螺/RunningHub) 專用代碼",
+          desc: "純中文精準 Caption，嚴格遵守歌詞框「防無聲死音守則」（移除英文樂器演奏指令，僅保留純歌詞與段落標籤），推薦 CFG Scale: 2.5。"
+        },
+        {
+          name: "5. Udio (v1.5) 風格權重與延伸策略",
+          desc: "Prompt Strength 與 Lyrics Strength 精細配比，以 32 秒為單位進行拍點對齊之段落無縫延伸 (Extend)。"
+        }
+      ],
+      extraTitle: "MiniMax Music 3 核心防坑守則 ⚠️",
+      extraContent: `
+        <div class="code-container">
+          <pre><code>Caption: 華語流行抒情歌曲，溫暖深情男聲，真實鋼琴與木吉他伴奏，弦樂漸進推向高潮，感傷懷舊，72拍\nLyrics: 嚴禁混入 [Acoustic guitar strumming...] 等英文樂器描述，MiniMax 無法解析會導致整段數十秒完全靜音 (NaN)！</code></pre>
+        </div>
+      `
+    }
   }
 ];
 
@@ -303,11 +343,12 @@ function setupSkillsSidebar(skills) {
   const sidebar = document.getElementById("skillsSidebar");
   const toggleBtn = document.getElementById("sidebarToggleBtn");
   const floatingBtn = document.getElementById("sidebarFloatingBtn");
+  const backdrop = document.getElementById("sidebarBackdrop");
   if (!sidebarList || !sidebar) return;
 
   sidebarList.innerHTML = "";
 
-  // 依照使用者規格 -AAA / -BBB 格式生成目錄項目
+  // 生成左側目錄項目（支援圖標、Skill ID、中文簡介）
   skills.forEach(skill => {
     const li = document.createElement("li");
     li.className = "sidebar-item";
@@ -317,7 +358,13 @@ function setupSkillsSidebar(skills) {
     a.className = "sidebar-item-link";
     a.dataset.id = skill.id;
     a.title = `${skill.id} (${skill.name})`;
-    a.innerHTML = `<span class="hyphen">-</span><span class="skill-name">${skill.id}</span>`;
+    a.innerHTML = `
+      <span class="item-icon">${skill.icon}</span>
+      <div class="item-text">
+        <span class="skill-name">${skill.id}</span>
+        <span class="skill-desc">${skill.name}</span>
+      </div>
+    `;
 
     // 點擊目錄項目：平滑跳轉並觸發目標卡片高亮霓虹動畫
     a.addEventListener("click", (e) => {
@@ -345,9 +392,10 @@ function setupSkillsSidebar(skills) {
         finalCard.classList.add("highlight-pulse");
       }
 
-      // 小螢幕下跳轉後自動收合目錄
+      // 小螢幕下跳轉後自動收合目錄與遮罩
       if (window.innerWidth <= 1280) {
         sidebar.classList.remove("open-mobile");
+        backdrop?.classList.remove("active");
       }
     });
 
@@ -360,7 +408,9 @@ function setupSkillsSidebar(skills) {
     toggleBtn.addEventListener("click", () => {
       sidebar.classList.add("collapsed");
       sidebar.classList.remove("open-mobile");
+      backdrop?.classList.remove("active");
       floatingBtn?.classList.add("visible");
+      document.body.classList.add("sidebar-collapsed");
     });
   }
 
@@ -368,8 +418,20 @@ function setupSkillsSidebar(skills) {
   if (floatingBtn) {
     floatingBtn.addEventListener("click", () => {
       sidebar.classList.remove("collapsed");
-      sidebar.classList.add("open-mobile");
+      if (window.innerWidth <= 1280) {
+        sidebar.classList.add("open-mobile");
+        backdrop?.classList.add("active");
+      }
       floatingBtn.classList.remove("visible");
+      document.body.classList.remove("sidebar-collapsed");
+    });
+  }
+
+  // 手機遮罩點擊關閉目錄
+  if (backdrop) {
+    backdrop.addEventListener("click", () => {
+      sidebar.classList.remove("open-mobile");
+      backdrop.classList.remove("active");
     });
   }
 

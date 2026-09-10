@@ -8,69 +8,86 @@
 
 ## 目錄結構與模組說明
 
-本專案遵循 Antigravity 官方標準規格，所有 Skills 均存放於 `.agents/skills/` 內：
+本專案遵循 Antigravity 官方標準規格，所有 Skills 均存放於 `.agents/skills/` 與 `skills/` 內：
 
 ```text
 short-video-skills/
 ├── README.md                                  # 本總覽指南與端到端實戰範例
+├── index.html / app.js / style.css            # GitHub Pages 官方展示入口
 └── .agents/
     └── skills/
         ├── short-video-director/              # 🎬 模組 1：短影音總導演與劇本架構師
         │   └── SKILL.md                       # 留存心理學、15/30/60秒節奏模板、9:16直式分鏡
-        ├── anime-video-producer/              # 🎨 模組 2：二次元動漫與風格化動畫短片製作專家
+        ├── visual-storyboard-artist/          # 🖼️ 模組 2：視覺分鏡師與動態故事板設計專家
+        │   ├── SKILL.md                       # 4大分鏡風格、導演鏡頭語法、多宮格(4/6/9格)生圖提示詞
+        │   └── references/
+        │       └── storyboard-grammar-cheatsheet.md # 焦段透視、三分法則、運鏡箭頭標記、MJ/FLUX模板
+        ├── anime-video-producer/              # ⚡ 模組 3：二次元動漫與風格化動畫短片製作專家
         │   ├── SKILL.md                       # 六大動漫學派、角色一致性錨定、日式作畫演出(Sakuga)
         │   ├── references/
         │   │   └── anime-style-dictionary.md  # 日系作畫術語(衝擊影格、板野馬戲團)、名導美學詞典
         │   └── templates/
         │       └── character-model-sheet.md   # 角色一致性三視圖提示詞範本與防崩壞 SOP
-        ├── visual-storyboard-artist/          # 🖼️ 模組 3：視覺分鏡師與動態故事板設計專家
-        │   ├── SKILL.md                       # 4大分鏡風格、導演鏡頭語法、多宮格(4/6/9格)生圖提示詞
-        │   └── references/
-        │       └── storyboard-grammar-cheatsheet.md # 焦段透視、三分法則、運鏡箭頭標記、MJ/FLUX模板
-        ├── storyboard-image-generator/        # 🎨 模組 4：分鏡提示詞繪製與關鍵格批次生成專家
-        │   ├── SKILL.md                       # SOP、雙模生圖(Agent/腳本)、參考圖鏈接(Chaining)
+        ├── cinematic-sports-video/            # 🏀 模組 4：電影級熱血運動短片專家
+        │   └── SKILL.md                       # 運動員資產鎖定(#21)、魚躍救球運鏡、MiniMax H3 標準提示詞
+        ├── storyboard-image-generator/        # 🎨 模組 5：分鏡提示詞繪製與關鍵格批次生成專家
+        │   ├── SKILL.md                       # SOP、雙模生圖(Agent/腳本)、參考圖鏈接(Chaining)、RunningHub 多參考資產包
         │   ├── scripts/
         │   │   └── batch_generate_shots.py    # 批次生圖、Slate卡片與 Contact Sheet 自動拼合腳本
         │   ├── templates/
         │   │   └── storyboard_shots_template.json # 標準分鏡生圖設定檔模板
         │   └── references/
         │       └── consistency-anchoring-guide.md # 跨鏡頭角色與畫風一致性防崩守則
-        ├── motion-prompt-engineer/            # 🎥 模組 5：AI 動態運鏡與提示詞工程師
+        ├── motion-prompt-engineer/            # 🎥 模組 6：AI 動態運鏡與提示詞工程師
         │   ├── SKILL.md                       # Runway/Kling/Luma/Hailuo 提示詞語法、API JSON
         │   └── references/
         │       └── camera-movement-lexicon.md # 專業運鏡（推拉搖移、升降、FPV、希區考克變焦）詞典
-        ├── audio-sound-designer/              # 🔊 模組 6：聲音設計與節奏卡點專家
+        ├── audio-sound-designer/              # 🔊 模組 7：聲音設計與節奏卡點專家
         │   └── SKILL.md                       # ElevenLabs TTS 情感標註、Suno BGM 提示詞、SFX 時間軸
-        └── video-assembly-pipeline/           # ✂️ 模組 7：剪輯合成與自動化管線
-            ├── SKILL.md                       # 9:16 安全區、動態彈跳字幕、FFmpeg 命令
-            └── scripts/
-                └── auto_assemble.py           # 輕量級 Python + FFmpeg 自動組裝腳本
+        ├── video-assembly-pipeline/           # ✂️ 模組 8：剪輯合成與自動化管線
+        │   ├── SKILL.md                       # 9:16 安全區、動態彈跳字幕、FFmpeg 命令
+        │   └── scripts/
+        │                 └── auto_assemble.py           # 輕量級 Python + FFmpeg 自動組裝腳本
+        └── songwriting-producer/              # 🎵 模組 9：歌曲創作與音樂製作專家
+            ├── SKILL.md                       # 歌詞工程、雙音韻/內嵌韻、4536251/卡農和弦、Suno/MiniMax 代碼
+            ├── references/
+            │   └── genre-and-chords-guide.md  # 八大曲風辭典、和弦進程走向、段落情緒能級表
+            └── templates/
+                └── ai-music-prompt-templates.md # Suno / MiniMax Music 3 / Udio 開箱即用模版與防死音指南
 ```
 
 ---
 
-## 7 大技能管線協同流程 (Pipeline Workflow)
+## 9 大技能管線協同流程 (Pipeline Workflow)
 
 ```mermaid
 flowchart TD
-    UserReq["使用者的一句話需求<br/>（熱血動漫短片 / 寫實電影感短影音）"] --> S1["1. short-video-director<br/>(總導演與劇本分鏡)"]
+    UserReq["使用者的一句話需求<br/>（熱血動漫短片 / 寫實電影感短影音 / 原創歌曲主題曲）"] --> S1["1. short-video-director<br/>(總導演與劇本分鏡)"]
     
-    UserReq -.->|"二次元動漫需求直達"| S_Anime["2. anime-video-producer<br/>(動漫視覺總監與作畫監督)"]
+    UserReq -.->|"二次元動漫需求直達"| S_Anime["3. anime-video-producer<br/>(動漫視覺總監與作畫監督)"]
+    UserReq -.->|"體育運動題材直達"| S_Sports["4. cinematic-sports-video<br/>(運動員資產與生片提示詞)"]
+    UserReq -.->|"原創歌曲/主題曲創作"| S_Song["9. songwriting-producer<br/>(歌詞工程、和弦與Suno/MiniMax代碼)"]
+    
     S1 -->|"動漫化分鏡演出"| S_Anime
+    S1 -->|"運動題材分鏡"| S_Sports
+    S1 -->|"主題曲/插曲創作需求"| S_Song
     
-    S1 -->|"視覺分鏡圖與多宮格需求"| S_Board["3. visual-storyboard-artist<br/>(視覺分鏡師與提示詞架構)"]
+    S1 -->|"視覺分鏡圖與多宮格需求"| S_Board["2. visual-storyboard-artist<br/>(視覺分鏡師與提示詞架構)"]
     S_Anime -->|"角色設定與作畫線稿"| S_Board
     
-    S_Board -->|"各分鏡生圖 Prompt"| S_Gen["4. storyboard-image-generator<br/>(分鏡批次生圖與聯絡總覽表)"]
+    S_Board -->|"各分鏡生圖 Prompt"| S_Gen["5. storyboard-image-generator<br/>(分鏡批次生圖與聯絡總覽表)"]
     S_Anime -->|"角色錨點/三視圖"| S_Gen
+    S_Sports -->|"運動員固定資產"| S_Gen
     
-    S_Gen -->|"各鏡頭實體圖 (shot_01.png / 首幀)"| S2["5. motion-prompt-engineer<br/>(Kling / Runway / Hailuo 視訊驅動)"]
+    S_Gen -->|"各鏡頭實體圖 (shot_01.png / 首幀)"| S2["6. motion-prompt-engineer<br/>(Kling / Runway / Hailuo 視訊驅動)"]
     S1 -->|"寫實鏡頭分鏡"| S2
+    S_Sports -->|"運動運鏡參數"| S2
     
-    S1 -->|"台詞與情緒時間軸"| S3["6. audio-sound-designer<br/>(TTS、聲優配音、BGM 與 SFX 卡點)"]
+    S1 -->|"台詞與情緒時間軸"| S3["7. audio-sound-designer<br/>(TTS、聲優配音、BGM 與 SFX 卡點)"]
     S_Anime -->|"戰鬥氣息/Kiai標籤"| S3
+    S_Song -->|"完整主題曲 / 配樂音軌"| S3
     
-    S2 -->|"視訊鏡頭片段 JSON / 影片檔"| S4["7. video-assembly-pipeline<br/>(自動化合成剪輯)"]
+    S2 -->|"視訊鏡頭片段 JSON / 影片檔"| S4["8. video-assembly-pipeline<br/>(自動化合成剪輯)"]
     S3 -->|"配音、音樂與音效軌"| S4
     S4 --> Final["🎬 最終 9:16 發布級短動態影片"]
 ```
@@ -196,8 +213,11 @@ python .agents/skills/video-assembly-pipeline/scripts/auto_assemble.py -m manife
    只要在對話中提及短動態影片的需求，例如：
    - *「我想拍一支 30 秒的科幻懸疑短影音，幫我規劃分鏡」* ➔ 自動觸發 `short-video-director`。
    - *「把這份分鏡轉成視覺分鏡表與多宮格構圖提示詞」* ➔ 自動觸發 `visual-storyboard-artist`。
+   - *「以日系熱血動畫 MAPPA 風格製作戰鬥動畫與三視圖」* ➔ 自動觸發 `anime-video-producer`。
+   - *「製作熱血籃球員奮鬥短片、救球運鏡與 MiniMax H3 專用提示詞」* ➔ 自動觸發 `cinematic-sports-video`。
    - *「把這些分鏡 Prompt 批次生成圖片與聯絡總覽表」* ➔ 自動觸發 `storyboard-image-generator`。
    - *「幫我產出 RunningHub / MiniMax H3 參考生視頻所需的主角、怪物與場景參考圖」* ➔ 自動觸發 `storyboard-image-generator` (模式 C)。
    - *「把這份分鏡轉成 Runway Gen-3 的運鏡提示詞與 JSON」* ➔ 自動觸發 `motion-prompt-engineer`。
    - *「幫我設計這段旁白的 TTS 情感停頓與 BGM/SFX 卡點表」* ➔ 自動觸發 `audio-sound-designer`。
+   - *「創作一首華語流行抒情主題曲的歌詞、和弦與 Suno/MiniMax 提示詞」* ➔ 自動觸發 `songwriting-producer`。
    - *「把鏡頭和聲音合成直式 9:16 短片」* ➔ 自動觸發 `video-assembly-pipeline`。

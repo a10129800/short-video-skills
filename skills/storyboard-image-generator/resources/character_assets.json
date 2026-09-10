@@ -1,0 +1,22 @@
+{
+  "character_assets": {
+    "lu_zixuan_21": {
+      "name": "陸子軒",
+      "number": 21,
+      "role": "SF (先發小前鋒)",
+      "reference_jpg": "C:/Users/mice/.gemini/antigravity-ide/brain/a522136e-dcc0-43ab-adc0-0799183b46a9/.user_uploaded/media_1788937381978.jpg",
+      "prompt_anchor": "20yo handsome athletic East Asian male basketball player Lu Zi-xuan, messy black layered hair, muscular build, wearing black basketball jersey #21 with red and gold trim, black compression knee tights, black left wristband, red-black-white high-top sneakers"
+    },
+    "coach_gao": {
+      "name": "高振峰教練",
+      "role": "總教練",
+      "reference_jpg": "C:/Users/mice/.gemini/antigravity-ide/brain/a522136e-dcc0-43ab-adc0-0799183b46a9/.user_uploaded/media_1788937381957.jpg",
+      "prompt_anchor": "40yo mature East Asian male basketball coach Gao Zhen-feng, neat short black hair, clean facial stubble, sharp observant falcon eyes, wearing black track jacket with bold red and gold shoulder panels, silver whistle on chest, holding tactical whiteboard"
+    },
+    "shot01_start_frame": {
+      "purpose": "Shot 01 首幀關鍵格 (I2V)",
+      "reference_jpg": "C:/Users/mice/.gemini/antigravity-ide/brain/1f6a814c-25ec-4c13-95db-7b33004f8b24/bench_twentyone_confetti_1788934999288.jpg",
+      "description": "陸子軒坐在板凳角落，身後滿天金色彩帶狂歡"
+    }
+  }
+}
