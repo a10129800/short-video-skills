@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《第二十一號的黎明》全角色視覺設定圖鑑 (Character Artwork & Model Sheets)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;600;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-card: #0e1420;
+      --border-card: #1e293b;
+      --gold-primary: #ffb703;
+      --gold-glow: rgba(255, 183, 3, 0.4);
+      --red-accent: #e63946;
+      --cyan-accent: #38bdf8;
+      --purple-accent: #a855f7;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 10%, #151d2f 0%, var(--bg-dark) 80%);
+      color: var(--text-main);
+      font-family: 'Inter', 'Noto Sans TC', sans-serif;
+      min-height: 100vh;
+      padding: 40px 24px;
+    }
+
+    .container {
+      max-width: 1480px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 48px;
+      position: relative;
+    }
+
+    .badge-title {
+      display: inline-block;
+      background: rgba(255, 183, 3, 0.15);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-primary);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: 'Cinzel', 'Noto Sans TC', serif;
+      font-size: 38px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #ffffff 0%, #ffde59 50%, #ff9100 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .header p {
+      color: var(--text-muted);
+      font-size: 16px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Grid */
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 32px;
+      margin-bottom: 60px;
+    }
+
+    /* Card Styling */
+    .char-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+    }
+
+    .char-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 24px 48px -12px var(--gold-glow);
+    }
+
+    .char-card.lead-card {
+      border: 2px solid var(--gold-primary);
+      box-shadow: 0 16px 36px rgba(255, 183, 3, 0.15);
+    }
+
+    .char-card.rival-card {
+      border-color: #8b5cf6;
+    }
+    .char-card.rival-card:hover {
+      border-color: #d946ef;
+      box-shadow: 0 24px 48px -12px rgba(217, 70, 239, 0.35);
+    }
+
+    /* Visual Banner / Portrait Area */
+    .portrait-area {
+      height: 480px;
+      position: relative;
+      background: #000;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.5s ease;
+    }
+
+    .char-card:hover .portrait-img {
+      transform: scale(1.04);
+    }
+
+    .jersey-tag {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      z-index: 2;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .tag-gold {
+      background: rgba(0, 0, 0, 0.85);
+      border: 1.5px solid var(--gold-primary);
+      color: var(--gold-primary);
+    }
+
+    .tag-red {
+      background: rgba(0, 0, 0, 0.85);
+      border: 1.5px solid var(--red-accent);
+      color: #ff6b6b;
+    }
+
+    .tag-cyan {
+      background: rgba(0, 0, 0, 0.85);
+      border: 1.5px solid var(--cyan-accent);
+      color: var(--cyan-accent);
+    }
+
+    .tag-amber {
+      background: rgba(0, 0, 0, 0.85);
+      border: 1.5px solid #f59e0b;
+      color: #f59e0b;
+    }
+
+    .tag-purple {
+      background: rgba(0, 0, 0, 0.85);
+      border: 1.5px solid #a855f7;
+      color: #c084fc;
+    }
+
+    .role-badge {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    .card-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex-grow: 1;
+    }
+
+    .char-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .char-title h2 {
+      font-size: 22px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+
+    .char-title span {
+      font-size: 13px;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 2px;
+    }
+
+    .char-quote {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 3px solid var(--gold-primary);
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13.5px;
+      font-style: italic;
+      color: #e2e8f0;
+      line-height: 1.5;
+    }
+
+    .stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .stats-table td {
+      padding: 5px 0;
+      color: var(--text-muted);
+    }
+
+    .stats-table td.val {
+      text-align: right;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* Gear Tags */
+    .gear-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #cbd5e1;
+    }
+
+    /* Prompt Box */
+    .prompt-container {
+      background: #090c13;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .prompt-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gold-primary);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .prompt-text {
+      font-size: 12px;
+      color: #94a3b8;
+      font-family: monospace;
+      line-height: 1.5;
+      max-height: 72px;
+      overflow-y: auto;
+    }
+
+    .btn-copy {
+      background: rgba(255, 183, 3, 0.12);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-primary);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      margin-top: auto;
+    }
+
+    .btn-copy:hover {
+      background: var(--gold-primary);
+      color: #000;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #10b981;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Top Header -->
+    <div class="header">
+      <div class="badge-title">Character Model Sheets · 視覺角色庫</div>
+      <h1>《第二十一號的黎明》全角色圖鑑卡</h1>
+      <p>已成功繪製全陣容高畫質動態角色立繪，涵蓋先發五人、鐵血教練與八強宿敵之裝備與生成錨點</p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="character-grid">
+
+      <!-- 1. 陸子軒 -->
+      <div class="char-card lead-card">
+        <div class="portrait-area">
+          <span class="jersey-tag tag-gold">#21 · 主角</span>
+          <span class="role-badge">SF 先發小前鋒</span>
+          <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_lu_zixuan_1789035561284.jpg" alt="陸子軒" class="portrait-img">
+        </div>
+
+        <div class="card-content">
+          <div class="char-header">
+            <div class="char-title">
+              <h2>陸子軒 (Lu Zi-xuan)</h2>
+              <span>20 歲 · 188cm · 78kg · 先發防守大鎖</span>
+            </div>
+          </div>
+
+          <div class="char-quote">
+            「球在哪裡，命就在哪裡！我不是來這裡當一輩子觀眾的！」
+          </div>
+
+          <table class="stats-table">
+            <tr><td>定位/風格</td><td class="val">窒息單防 / 飛撲地板救球 / 攻防轉換</td></tr>
+            <tr><td>球衣規格</td><td class="val">黑底金色滾邊紅線條 · 胸背醒目「21」號</td></tr>
+            <tr><td>配件規格</td><td class="val">左前臂黑護腕 · 黑色加壓七分褲 · Bred球鞋</td></tr>
+          </table>
+
+          <div class="gear-pills">
+            <span class="pill">#21 戰袍</span>
+            <span class="pill">左腕加壓護帶</span>
+            <span class="pill">黑紅高筒戰靴</span>
+            <span class="pill">死亡纏繞</span>
+          </div>
+
+          <div class="prompt-container">
+            <div class="prompt-label">AI 視覺錨點 (Prompt Anchor)</div>
+            <div class="prompt-text" id="p_lu">Dynamic anime sports concept art, 20yo handsome athletic East Asian male basketball player Lu Zi-xuan, messy black layered hair, intense determined gaze, confident slight smirk, lean muscular athletic build, wearing black basketball jersey with bold gold number 21 and red trim, black compression knee tights, black left wristband, red-black-white high-top sneakers, holding a basketball at waist, arena spotlight, 8k</div>
+          </div>
+
+          <button class="btn-copy" onclick="copyPrompt('p_lu')">📋 複製陸子軒 Prompt</button>
+        </div>
+      </div>
+
+      <!-- 2. 高振峰 教練 -->
+      <div class="char-card lead-card">
+        <div class="portrait-area">
+          <span class="jersey-tag tag-red">HEAD COACH</span>
+          <span class="role-badge">總教練 · 鐵血指針</span>
+          <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_coach_gao_1789035576531.jpg" alt="高振峰教練" class="portrait-img">
+        </div>
+
+        <div class="card-content">
+          <div class="char-header">
+            <div class="char-title">
+              <h2>高振峰 (Coach Gao)</h2>
+              <span>40 歲 · 前國家隊先發控衛 · 嚴苛教頭</span>
+            </div>
+          </div>
+
+          <div class="char-quote">
+            「球隊最不缺的就是自以為是的得分手！上去，給我至死方休地鎖死他！」
+          </div>
+
+          <table class="stats-table">
+            <tr><td>風格理念</td><td class="val">高壓全場緊逼 / 極限防守哲學 / 零藉口</td></tr>
+            <tr><td>服飾規格</td><td class="val">黑底紅金撞色運動風衣 · 黑色長褲 · 跑鞋</td></tr>
+            <tr><td>代表配件</td><td class="val">金屬銀色裁判口哨 · 戰術白板 (Clipboard)</td></tr>
+          </table>
+
+          <div class="gear-pills">
+            <span class="pill">戰術風衣</span>
+            <span class="pill">銀色哨子</span>
+            <span class="pill">戰術白板</span>
+            <span class="pill">獵鷹眼神</span>
+          </div>
+
+          <div class="prompt-container">
+            <div class="prompt-label">AI 視覺錨點 (Prompt Anchor)</div>
+            <div class="prompt-text" id="p_gao">Dynamic anime sports concept art, 40yo mature East Asian male basketball head coach Gao Zhen-feng, neat short black hair, clean facial stubble, sharp falcon eyes glaring with intense discipline, wearing black athletic track jacket with bold red and gold shoulder panels, silver whistle on chest, holding white tactical clipboard, authoritative aura, 8k</div>
+          </div>
+
+          <button class="btn-copy" onclick="copyPrompt('p_gao')">📋 複製高教練 Prompt</button>
+        </div>
+      </div>
+
+      <!-- 3. 陳浩天 隊長 -->
+      <div class="char-card">
+        <div class="portrait-area">
+          <span class="jersey-tag tag-gold">#4 · 隊長</span>
+          <span class="role-badge">PG 控球後衛</span>
+          <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_chen_haotian_1789035869092.jpg" alt="陳浩天" class="portrait-img">
+        </div>
+
+        <div class="card-content">
+          <div class="char-header">
+            <div class="char-title">
+              <h2>陳浩天 (Chen Hao-tian)</h2>
+              <span>21 歲 · 185cm · 大腦司令官 · 隊長</span>
+            </div>
+          </div>
+
+          <div class="char-quote">
+            「別回頭，子軒。只要你搶下來，我就一定能把球放進籃框。」
+          </div>
+
+          <table class="stats-table">
+            <tr><td>特徵外貌</td><td class="val">乾淨俐落寸頭 · 左眉帶有微小斷眉痕 · 神情冷峻</td></tr>
+            <tr><td>球衣配件</td><td class="val">黑底紅金「4」號球衣 · 右小腿加壓護套 · 白球鞋</td></tr>
+          </table>
+
+          <div class="gear-pills">
+            <span class="pill">#4 戰袍</span>
+            <span class="pill">冷酷指揮官</span>
+            <span class="pill">斷眉寸頭</span>
+            <span class="pill">快攻箭頭</span>
+          </div>
+
+          <div class="prompt-container">
+            <div class="prompt-label">AI 視覺錨點 (Prompt Anchor)</div>
+            <div class="prompt-text" id="p_chen">Dynamic anime sports concept art, 21yo serious East Asian male basketball point guard captain Chen Hao-tian, clean buzz cut haircut with subtle eyebrow slit, sharp piercing eyes, calm commanding stern expression, wearing black basketball jersey with bold #4 and red-gold trim, white basketball sneakers, 8k</div>
+          </div>
+
+          <button class="btn-copy" onclick="copyPrompt('p_chen')">📋 複製陳浩天 Prompt</button>
+        </div>
+      </div>
+
+      <!-- 4. 林敬 神射手 -->
+      <div class="char-card">
+        <div class="portrait-area">
+          <span class="jersey-tag tag-cyan">#7 · 先發</span>
+          <span class="role-badge">SG 得分後衛</span>
+          <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_lin_jing_1789035915101.jpg" alt="林敬" class="portrait-img">
+        </div>
+
+        <div class="card-content">
+          <div class="char-header">
+            <div class="char-title">
+              <h2>林敬 (Lin Jing)</h2>
+              <span>20 歲 · 190cm · 冷血刺客 · 外線神射</span>
+            </div>
+          </div>
+
+          <div class="char-quote">
+            「把對手逼到絕境是你的工作，一箭穿心是我的工作。」
+          </div>
+
+          <table class="stats-table">
+            <tr><td>特徵外貌</td><td class="val">修長體格 · 單眼皮 · 自然微卷黑髮 · 眼神沉靜</td></tr>
+            <tr><td>球衣配件</td><td class="val">黑底青金「7」號球衣 · 雙臂黑色射手袖 (Sleeves)</td></tr>
+          </table>
+
+          <div class="gear-pills">
+            <span class="pill">#7 戰袍</span>
+            <span class="pill">雙臂黑色射手袖</span>
+            <span class="pill">微卷黑髮</span>
+            <span class="pill">致命三分</span>
+          </div>
+
+          <div class="prompt-container">
+            <div class="prompt-label">AI 視覺錨點 (Prompt Anchor)</div>
+            <div class="prompt-text" id="p_lin">Dynamic anime sports concept art, 20yo slender athletic East Asian male basketball shooting guard Lin Jing, stylish wavy black hair, calm focused expression, single eyelids, wearing black basketball jersey with bold cyan and gold #7 trim, black compression shooting sleeves on both arms, 8k</div>
+          </div>
+
+          <button class="btn-copy" onclick="copyPrompt('p_lin')">📋 複製林敬 Prompt</button>
+        </div>
+      </div>
+
+      <!-- 5. 趙磊 禁區巨塔 -->
+      <div class="char-card">
+        <div class="portrait-area">
+          <span class="jersey-tag tag-amber">#15 · 先發</span>
+          <span class="role-badge">C 先發中鋒</span>
+          <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_zhao_lei_1789035935123.jpg" alt="趙磊" class="portrait-img">
+        </div>
+
+        <div class="card-content">
+          <div class="char-header">
+            <div class="char-title">
+              <h2>趙磊 (Zhao Lei)</h2>
+              <span>22 歲 · 203cm · 112kg · 禁區守護神</span>
+            </div>
+          </div>
+
+          <div class="char-quote">
+            「倒在地上幹嘛？起來！後面的籃框，老子替你守著！」
+          </div>
+
+          <table class="stats-table">
+            <tr><td>特徵外貌</td><td class="val">寸頭粗眉 · 骨架極為魁梧厚實 · 豪爽熱血</td></tr>
+            <tr><td>球衣配件</td><td class="val">黑底紅金「15」號球衣 · 雙膝特厚重型加壓護膝</td></tr>
+          </table>
+
+          <div class="gear-pills">
+            <span class="pill">#15 戰袍</span>
+            <span class="pill">203cm 巨塔</span>
+            <span class="pill">重裝護膝</span>
+            <span class="pill">籃板怪獸</span>
+          </div>
+
+          <div class="prompt-container">
+            <div class="prompt-label">AI 視覺錨點 (Prompt Anchor)</div>
+            <div class="prompt-text" id="p_zhao">Dynamic anime sports concept art, 22yo massive 203cm muscular heavyweight East Asian male basketball center Zhao Lei, thick bushy eyebrows, neat buzz cut, wide shoulders, broad chest, cheerful rugged heroic smile, wearing black basketball jersey #15 with red trim, heavy knee brace pads, 8k</div>
+          </div>
+
+          <button class="btn-copy" onclick="copyPrompt('p_zhao')">📋 複製趙磊 Prompt</button>
+        </div>
+      </div>
+
+      <!-- 6. 雷震 宿敵王牌 -->
+      <div class="char-card rival-card">
+        <div class="portrait-area">
+          <span class="jersey-tag tag-purple">#0 · 烈風王牌</span>
+          <span class="role-badge" style="border-color: #c084fc; color: #c084fc;">宿敵 得分王</span>
+          <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_lei_zhen_1789035595410.jpg" alt="雷震" class="portrait-img">
+        </div>
+
+        <div class="card-content">
+          <div class="char-header">
+            <div class="char-title">
+              <h2>雷震 (Lei Zhen)</h2>
+              <span>20 歲 · 192cm · 烈風隊得分王 · 宿敵</span>
+            </div>
+          </div>
+
+          <div class="char-quote">
+            「換個板凳遞水的來防我？別逗了，你連我的車尾燈都摸不到！」
+          </div>
+
+          <table class="stats-table">
+            <tr><td>特徵外貌</td><td class="val">暗銀灰挑染刺蝟頭 · 眼神桀驁狂妄 · 爆發力極強</td></tr>
+            <tr><td>球衣配件</td><td class="val">客場白紫金「0」號球衣 · 左臂亮螢光黃護臂</td></tr>
+          </table>
+
+          <div class="gear-pills">
+            <span class="pill">#0 烈風戰袍</span>
+            <span class="pill">銀灰挑染刺蝟頭</span>
+            <span class="pill">螢光黃護臂</span>
+            <span class="pill">單挑王</span>
+          </div>
+
+          <div class="prompt-container">
+            <div class="prompt-label">AI 視覺錨點 (Prompt Anchor)</div>
+            <div class="prompt-text" id="p_lei">Dynamic anime sports concept art, 20yo arrogant athletic East Asian basketball superstar Lei Zhen, messy spiky hair with subtle silver highlights, cocky confident smirk, sharp piercing eyes, wearing away white-and-purple basketball jersey with bold #0, neon yellow arm sleeve, 8k</div>
+          </div>
+
+          <button class="btn-copy" onclick="copyPrompt('p_lei')">📋 複製雷震 Prompt</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Prompt 已成功複製到剪貼簿！</div>
+
+  <script>
+    function copyPrompt(elementId) {
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      });
+    }
+  </script>
+</body>
+</html>

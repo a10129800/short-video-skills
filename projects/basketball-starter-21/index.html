@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>《第二十一號的黎明》短動態影音總控台 (Master Project Hub)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;600;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-surface: #0e1422;
+      --bg-card: #131b2e;
+      --border: #1e2a42;
+      --border-light: rgba(255, 255, 255, 0.08);
+      --gold: #ffb703;
+      --gold-glow: rgba(255, 183, 3, 0.35);
+      --crimson: #e63946;
+      --cyan: #38bdf8;
+      --purple: #a855f7;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: radial-gradient(circle at 50% 0%, #151d30 0%, var(--bg-dark) 75%);
+      color: var(--text);
+      font-family: 'Inter', 'Noto Sans TC', sans-serif;
+      line-height: 1.6;
+      padding: 36px 24px 80px 24px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1520px;
+      margin: 0 auto;
+    }
+
+    /* Master Header */
+    .master-header {
+      background: linear-gradient(135deg, rgba(20, 29, 48, 0.95), rgba(11, 16, 26, 0.98));
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      border-radius: 20px;
+      padding: 36px 40px;
+      margin-bottom: 32px;
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .header-info h1 {
+      font-family: 'Cinzel', 'Noto Sans TC', serif;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      background: linear-gradient(90deg, #ffffff, #ffe066, #ffb703);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .header-info p {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    .header-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12.5px;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+
+    .badge-gold { background: rgba(255, 183, 3, 0.12); color: var(--gold); border-color: rgba(255, 183, 3, 0.35); }
+    .badge-crimson { background: rgba(230, 57, 70, 0.12); color: #ff6b6b; border-color: rgba(230, 57, 70, 0.35); }
+    .badge-cyan { background: rgba(56, 189, 248, 0.12); color: var(--cyan); border-color: rgba(56, 189, 248, 0.35); }
+
+    /* Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 10px 22px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tab-btn:hover {
+      background: var(--bg-card);
+      color: #fff;
+      border-color: rgba(255, 183, 3, 0.4);
+    }
+
+    .tab-btn.active {
+      background: rgba(255, 183, 3, 0.15);
+      border-color: var(--gold);
+      color: var(--gold);
+      box-shadow: 0 4px 16px rgba(255, 183, 3, 0.15);
+    }
+
+    /* Section Container */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.35s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Storyboard Grid (9:16 Aspect Cards) */
+    .storyboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+
+    .shot-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+    }
+
+    .shot-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 40px -10px var(--gold-glow);
+    }
+
+    .shot-card.climax {
+      border-color: rgba(230, 57, 70, 0.5);
+    }
+    .shot-card.climax:hover {
+      border-color: #ff4d6d;
+      box-shadow: 0 20px 40px -10px rgba(255, 77, 109, 0.35);
+    }
+
+    .shot-top-bar {
+      padding: 12px 18px;
+      background: #0b101c;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .shot-id {
+      font-weight: 900;
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .shot-tc {
+      background: #182236;
+      padding: 3px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      color: #94a3b8;
+      font-family: monospace;
+      font-weight: 700;
+    }
+
+    .shot-img-container {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .shot-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s ease;
+    }
+
+    .shot-card:hover .shot-img {
+      transform: scale(1.04);
+    }
+
+    .shot-phase-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 800;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .shot-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-grow: 1;
+    }
+
+    .shot-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .shot-camera {
+      font-size: 12.5px;
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .shot-vo {
+      background: rgba(10, 16, 28, 0.7);
+      border-left: 3px solid var(--gold);
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13.5px;
+      color: #f1f5f9;
+      font-style: italic;
+    }
+
+    .prompt-box {
+      background: #080c14;
+      border: 1px solid #1a2336;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 11.5px;
+      color: #94a3b8;
+      font-family: monospace;
+      line-height: 1.5;
+      max-height: 72px;
+      overflow-y: auto;
+    }
+
+    .btn-copy {
+      background: rgba(255, 183, 3, 0.1);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+      margin-top: auto;
+    }
+
+    .btn-copy:hover {
+      background: var(--gold);
+      color: #000;
+    }
+
+    /* Characters Shelf */
+    .char-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .char-card-full {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      transition: transform 0.25s, border-color 0.25s;
+    }
+
+    .char-card-full:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+
+    .char-card-full.lead {
+      border: 2px solid var(--gold);
+    }
+
+    .char-thumb {
+      width: 100%;
+      height: 380px;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .char-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .char-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-grow: 1;
+    }
+
+    .char-name { font-size: 19px; font-weight: 800; color: #fff; }
+    .char-pos { font-size: 13px; color: var(--cyan); font-weight: 700; }
+    .char-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.5; }
+
+    /* Story Reader Area */
+    .story-reader {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 40px;
+      max-width: 900px;
+      margin: 0 auto 48px auto;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .story-reader h2 {
+      font-family: 'Cinzel', 'Noto Sans TC', serif;
+      font-size: 26px;
+      color: var(--gold);
+      margin-bottom: 24px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+
+    .story-reader h3 {
+      font-size: 19px;
+      color: #fff;
+      margin: 28px 0 14px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .story-reader p {
+      font-size: 15px;
+      color: #cbd5e1;
+      line-height: 1.9;
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    /* Pipeline Links Table */
+    .pipeline-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 40px;
+    }
+
+    .pipeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .pipeline-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+    }
+
+    .pipeline-item:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .pipeline-title { font-size: 15px; font-weight: 700; color: #fff; }
+    .pipeline-desc { font-size: 12px; color: var(--text-muted); }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: #10b981;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Master Header -->
+    <div class="master-header">
+      <div class="header-info">
+        <h1>《第二十一號的黎明》動態短影音總控中心</h1>
+        <p>從板凳最末端到先發五人 · 劇情分鏡生圖、全角色錨點立繪與生片工作流整合門戶</p>
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-gold">7 鏡頭劇情分鏡已實體生成</span>
+        <span class="badge badge-cyan">6 大角色立繪圖鑑完整建檔</span>
+        <span class="badge badge-crimson">9:16 (1080×1920) 規格</span>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs">
+      <button class="tab-btn active" onclick="switchTab('tab-storyboard')">🎬 劇情電影分鏡牆 (7 Shots)</button>
+      <button class="tab-btn" onclick="switchTab('tab-characters')">👥 角色視覺圖鑑庫 (6 Characters)</button>
+      <button class="tab-btn" onclick="switchTab('tab-story')">📖 原創熱血小說全文</button>
+      <button class="tab-btn" onclick="switchTab('tab-pipeline')">⚙️ 生視頻資產與管線 (MiniMax/ComfyUI)</button>
+    </div>
+
+    <!-- TAB 1: STORYBOARD TIMELINE (按劇情實體產生的分鏡圖) -->
+    <div id="tab-storyboard" class="tab-content active">
+      <div class="storyboard-grid">
+
+        <!-- Shot 01 -->
+        <div class="shot-card">
+          <div class="shot-top-bar">
+            <span class="shot-id">SHOT 01 · 序章 HOOK</span>
+            <span class="shot-tc">00:00 - 00:05</span>
+          </div>
+          <div class="shot-img-container">
+            <span class="shot-phase-badge">開場刺痛</span>
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/story_shot_01_1789036155256.jpg" alt="Shot 01 孤獨板凳" class="shot-img">
+          </div>
+          <div class="shot-body">
+            <div class="shot-title">冷板凳最邊緣的無汗戰袍</div>
+            <div class="shot-camera">Extreme Close-Up to Pull Out · Low Angle</div>
+            <div class="shot-vo">「那一年的全場歡呼……我連一滴汗，都沒資格流。」</div>
+            
+            <div style="font-size: 11px; font-weight: 800; color: var(--cyan); margin-top: 4px;">🇨🇳 中文提示詞（含對白台詞與角色情緒）</div>
+            <div class="prompt-box" id="prompt_s1_zh" style="border-color: rgba(56, 189, 248, 0.25); color: #e2e8f0;">電影級運動動漫畫面，9:16直式構圖，低角度極特寫緩慢拉遠。20歲東亞籃球員陸子軒留著黑色層次碎蓋微亂髮，穿著一塵不染、完全沒流汗的21號黑底紅金邊球衣，孤獨坐在替補席最深處的冷藍陰影中。他神情落寞低頭，雙手用力把捏扁的透明寶特瓶塞入網袋。角色低沉自語對白：「那一年的全場歡呼……我連一滴汗，都沒資格流。」遠景虛焦是漫天落下的金色彩帶與狂歡慶祝的隊友，高反差球館聚光燈，冷藍色調陰影，深沉壓抑的電影氛圍。</div>
+            
+            <div style="font-size: 11px; font-weight: 800; color: var(--gold); margin-top: 4px;">🇺🇸 英文提示詞 (MiniMax / Kling / Runway)</div>
+            <div class="prompt-box" id="prompt_s1_en">Cinematic sports anime movie scene, 9:16 vertical frame, 20yo handsome East Asian basketball player Lu Zi-xuan sitting alone in deep cold blue shadows on bench edge, looking down at empty crumpled water bottle, pristine clean black jersey #21 without sweat, distant bright background out of focus teammates celebrating under golden confetti, emotional atmosphere</div>
+            
+            <div style="display: flex; gap: 8px; margin-top: auto;">
+              <button class="btn-copy" style="flex: 1;" onclick="copyText('prompt_s1_zh')">📋 複製中文 (含對白)</button>
+              <button class="btn-copy" style="flex: 1; background: rgba(56, 189, 248, 0.1); border-color: var(--cyan); color: var(--cyan);" onclick="copyText('prompt_s1_en')">📋 複製英文</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shot 02 -->
+        <div class="shot-card">
+          <div class="shot-top-bar">
+            <span class="shot-id">SHOT 02 · 起 · 磨礪</span>
+            <span class="shot-tc">00:05 - 00:12</span>
+          </div>
+          <div class="shot-img-container">
+            <span class="shot-phase-badge">晨霧瘋魔</span>
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/story_shot_02_1789036507674.jpg" alt="Shot 02 晨霧滑步" class="shot-img">
+          </div>
+          <div class="shot-body">
+            <div class="shot-title">凌晨五點半的晨霧滑步</div>
+            <div class="shot-camera">Floor-Level Tracking Shot · Low Angle</div>
+            <div class="shot-vo">「但我不是來這裡……當一輩子觀眾的！每天五百顆跳投、二十組極限衝刺！」</div>
+            
+            <div style="font-size: 11px; font-weight: 800; color: var(--cyan); margin-top: 4px;">🇨🇳 中文提示詞（含對白台詞與角色情緒）</div>
+            <div class="prompt-box" id="prompt_s2_zh" style="border-color: rgba(56, 189, 248, 0.25); color: #e2e8f0;">電影級運動動漫畫面，9:16直式構圖，貼地低角度跟隨鏡頭。凌晨五點半空曠挑高的室內籃球館，冷藍晨霧在反光木地板上瀰漫。陸子軒穿著21號球衣與黑色加壓褲，以極低重心瘋狂進行極限防守滑步，球鞋橡膠在地面發出刺耳煞車摩擦聲。汗水不斷從下巴滴落木地板，他在冷空氣中吐出白霧熱氣，眼神燃燒著執念咬牙怒吼對白：「但我不是來這裡當一輩子觀眾的！每天五百顆跳投、二十組極限衝刺！」頂棚單一孤立聚光燈，動態殘影，汗珠飛濺。</div>
+
+            <div style="font-size: 11px; font-weight: 800; color: var(--gold); margin-top: 4px;">🇺🇸 英文提示詞 (MiniMax / Kling / Runway)</div>
+            <div class="prompt-box" id="prompt_s2_en">Cinematic sports anime movie scene, 9:16 vertical frame, low-angle floor level shot, 5:30 AM dawn in empty indoor gymnasium, cold blue morning mist floating above polished reflective floor, Lu Zi-xuan in black jersey #21 executing intense defensive sliding steps, heavy sweat dripping, breathing out visible steam, dramatic lone ceiling spotlight</div>
+
+            <div style="display: flex; gap: 8px; margin-top: auto;">
+              <button class="btn-copy" style="flex: 1;" onclick="copyText('prompt_s2_zh')">📋 複製中文 (含對白)</button>
+              <button class="btn-copy" style="flex: 1; background: rgba(56, 189, 248, 0.1); border-color: var(--cyan); color: var(--cyan);" onclick="copyText('prompt_s2_en')">📋 複製英文</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shot 03 -->
+        <div class="shot-card">
+          <div class="shot-top-bar">
+            <span class="shot-id">SHOT 03 · 承 · 棒喝</span>
+            <span class="shot-tc">00:12 - 00:22</span>
+          </div>
+          <div class="shot-img-container">
+            <span class="shot-phase-badge">信仰覺醒</span>
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/story_shot_03_1789036533305.jpg" alt="Shot 03 鐵血棒喝" class="shot-img">
+          </div>
+          <div class="shot-body">
+            <div class="shot-title">鐵壁火鍋與滲血的膝蓋</div>
+            <div class="shot-camera">Medium Shot Push-In · High Contrast Chiaroscuro</div>
+            <div class="shot-vo">「球隊最不缺的，就是自以為是的得分手！滾回去遞水！」</div>
+            
+            <div style="font-size: 11px; font-weight: 800; color: var(--cyan); margin-top: 4px;">🇨🇳 中文提示詞（含對白台詞與角色情緒）</div>
+            <div class="prompt-box" id="prompt_s3_zh" style="border-color: rgba(56, 189, 248, 0.25); color: #e2e8f0;">電影級運動動漫畫面，9:16直式構圖，中景緩慢推鏡。40歲總教練高振峰穿著黑底紅金運動夾克，胸前掛著金屬銀哨，左手持戰術板，眼神如獵鷹般銳利嚴苛。木地板上陸子軒進攻被大火鍋封蓋後摔坐在地，手肘挫傷，膝蓋上的繃帶滲出斑斑血跡，籃球在陰影中滾動。高教練手指著他厲聲訓斥對白：「球隊最不缺的，就是自以為是的得分手！滾回去遞水！」強烈明暗對比，充滿壓迫感與嚴師鐵血氣場。</div>
+
+            <div style="font-size: 11px; font-weight: 800; color: var(--gold); margin-top: 4px;">🇺🇸 英文提示詞 (MiniMax / Kling / Runway)</div>
+            <div class="prompt-box" id="prompt_s3_en">Cinematic sports anime movie scene, 9:16 vertical frame, Coach Gao Zhen-feng in black track jacket with red-gold trim standing sternly holding whiteboard and whistle, looking down with intense discipline, player Lu Zi-xuan #21 fallen on court with scraped bruised knee bandages with blood stains, basketball bouncing away in shadows</div>
+
+            <div style="display: flex; gap: 8px; margin-top: auto;">
+              <button class="btn-copy" style="flex: 1;" onclick="copyText('prompt_s3_zh')">📋 複製中文 (含對白)</button>
+              <button class="btn-copy" style="flex: 1; background: rgba(56, 189, 248, 0.1); border-color: var(--cyan); color: var(--cyan);" onclick="copyText('prompt_s3_en')">📋 複製英文</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shot 04 -->
+        <div class="shot-card">
+          <div class="shot-top-bar">
+            <span class="shot-id">SHOT 04 · 轉 · 覺醒</span>
+            <span class="shot-tc">00:22 - 00:36</span>
+          </div>
+          <div class="shot-img-container">
+            <span class="shot-phase-badge">獵犬出柙</span>
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/story_shot_04_1789036552763.jpg" alt="Shot 04 極限抄截" class="shot-img">
+          </div>
+          <div class="shot-body">
+            <div class="shot-title">瘋狗防守與閃電切球</div>
+            <div class="shot-camera">Dynamic Action Whip-Pan · Fast Shutter Speed</div>
+            <div class="shot-vo">「進攻會失準，但只要心臟還在跳就永不背叛——骨氣與防守！」</div>
+            
+            <div style="font-size: 11px; font-weight: 800; color: var(--cyan); margin-top: 4px;">🇨🇳 中文提示詞（含對白台詞與角色情緒）</div>
+            <div class="prompt-box" id="prompt_s4_zh" style="border-color: rgba(56, 189, 248, 0.25); color: #e2e8f0;">電影級運動動漫畫面，9:16直式構圖，動態甩鏡高速快門捕捉。隊內對抗賽，陸子軒壓低重心如餓狼般死亡纏繞防守隊長陳浩天（4號）。浩天試圖交叉變向突破，子軒預判腳步閃電前撲，長臂如鐵鉗般精準切擊，指尖乾脆挑飛籃球！子軒眼神野性兇狠，心中怒吼對白：「進攻會失準，但只要心臟還在跳就永不背叛——骨氣與防守！」汗珠如碎鑽般炸開，木地板動態倒影，火花四濺的攻防張力。</div>
+
+            <div style="font-size: 11px; font-weight: 800; color: var(--gold); margin-top: 4px;">🇺🇸 英文提示詞 (MiniMax / Kling / Runway)</div>
+            <div class="prompt-box" id="prompt_s4_en">Cinematic sports anime movie scene, 9:16 vertical frame, dynamic action angle with motion blur, player Lu Zi-xuan #21 in low defense against captain Chen Hao-tian #4, lunging forward with lightning reflex, hand cleanly slapping basketball away, sparkling sweat flying under bright gym lights, intense predator eyes</div>
+
+            <div style="display: flex; gap: 8px; margin-top: auto;">
+              <button class="btn-copy" style="flex: 1;" onclick="copyText('prompt_s4_zh')">📋 複製中文 (含對白)</button>
+              <button class="btn-copy" style="flex: 1; background: rgba(56, 189, 248, 0.1); border-color: var(--cyan); color: var(--cyan);" onclick="copyText('prompt_s4_en')">📋 複製英文</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shot 05 -->
+        <div class="shot-card climax">
+          <div class="shot-top-bar">
+            <span class="shot-id" style="color: #ff4d6d;">SHOT 05 · 高潮 CLIMAX</span>
+            <span class="shot-tc">00:36 - 00:48</span>
+          </div>
+          <div class="shot-img-container">
+            <span class="shot-phase-badge" style="border-color: #ff4d6d; color: #ff6b6b;">絕殺救球</span>
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/story_shot_05_1789036803495.jpg" alt="Shot 05 魚躍撲救" class="shot-img">
+          </div>
+          <div class="shot-body">
+            <div class="shot-title">魚躍平飛出界，砸翻技術台</div>
+            <div class="shot-camera">120fps Slow-Motion Crash Zoom · Arena Lights</div>
+            <div class="shot-vo">「全場沒人知道我是誰！但我知道——球在哪裡，命就在哪裡！！」</div>
+            
+            <div style="font-size: 11px; font-weight: 800; color: var(--cyan); margin-top: 4px;">🇨🇳 中文提示詞（含對白台詞與角色情緒）</div>
+            <div class="prompt-box" id="prompt_s5_zh" style="border-color: rgba(56, 189, 248, 0.25); color: #e2e8f0;">電影級運動動漫畫面，9:16直式構圖，120幀極限慢動作撞擊推鏡。八強生死戰最後一擊，籃球向邊線外飛去。陸子軒穿著21號戰袍完全無視障礙，整個人與地面平行魚躍橫身飛出界外！手臂青筋暴起，在空中狂吼對白：「全場沒人知道我是誰！但我知道——球在哪裡，命就在哪裡！！」單手極限將球撈回場內，下一秒身體重重撞翻技術台擋板與金屬折疊椅，紙張、筆電與水瓶在半空中翻飛散落，強烈球場探照燈，震撼高潮定格。</div>
+
+            <div style="font-size: 11px; font-weight: 800; color: var(--gold); margin-top: 4px;">🇺🇸 英文提示詞 (MiniMax / Kling / Runway)</div>
+            <div class="prompt-box" id="prompt_s5_en">Cinematic sports anime scene, 9:16 vertical, 120fps slow-motion action frame, player Lu Zi-xuan #21 airborne diving horizontally parallel to court over boundary line, veins bulging, one hand scooping loose basketball back, crashing through courtside table, metal folding chairs knocked over, flying water bottles and papers</div>
+
+            <div style="display: flex; gap: 8px; margin-top: auto;">
+              <button class="btn-copy" style="flex: 1;" onclick="copyText('prompt_s5_zh')">📋 複製中文 (含對白)</button>
+              <button class="btn-copy" style="flex: 1; background: rgba(56, 189, 248, 0.1); border-color: var(--cyan); color: var(--cyan);" onclick="copyText('prompt_s5_en')">📋 複製英文</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shot 06 -->
+        <div class="shot-card">
+          <div class="shot-top-bar">
+            <span class="shot-id">SHOT 06 · 轉折圓滿</span>
+            <span class="shot-tc">00:48 - 00:54</span>
+          </div>
+          <div class="shot-img-container">
+            <span class="shot-phase-badge">先發加冕</span>
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/story_shot_06_1789036826040.jpg" alt="Shot 06 白板先發" class="shot-img">
+          </div>
+          <div class="shot-body">
+            <div class="shot-title">白板寫下 SF #21 陸子軒</div>
+            <div class="shot-camera">Macro Rack Focus Tilt-Up · Morning Sunbeams</div>
+            <div class="shot-vo">「替補席，不再是我的終點。先發第五人，第二十一號！」</div>
+            
+            <div style="font-size: 11px; font-weight: 800; color: var(--cyan); margin-top: 4px;">🇨🇳 中文提示詞（含對白台詞與角色情緒）</div>
+            <div class="prompt-box" id="prompt_s6_zh" style="border-color: rgba(56, 189, 248, 0.25); color: #e2e8f0;">電影級運動動漫畫面，9:16直式構圖，微距變焦由白板上搖。清晨金色的晨光透過更衣室百葉窗灑下丁達爾光束，高教練手持黑色麥克筆，在白板先發五人名單最後一欄重重寫下「#21 陸子軒 (SF)」。鏡頭移向坐在長凳上的陸子軒，他眼眶含淚泛紅、雙拳緊握，哽咽自語對白：「替補席，不再是我的終點。先發名單上的最後一個名字……第二十一號。」隊長陳浩天與中鋒趙磊在身旁激動拍打他的肩膀大笑歡呼，溫暖感人的榮耀加冕時刻。</div>
+
+            <div style="font-size: 11px; font-weight: 800; color: var(--gold); margin-top: 4px;">🇺🇸 英文提示詞 (MiniMax / Kling / Runway)</div>
+            <div class="prompt-box" id="prompt_s6_en">Cinematic sports anime movie scene, 9:16 vertical frame, warm morning sunlight cutting through locker room window blinds, coach Gao Zhen-feng writing with black marker on clean whiteboard bold text '#21 LU ZI-XUAN (SF)', camera tilts to player Lu Zi-xuan with tears in emotional eyes, teammates cheering around him</div>
+
+            <div style="display: flex; gap: 8px; margin-top: auto;">
+              <button class="btn-copy" style="flex: 1;" onclick="copyText('prompt_s6_zh')">📋 複製中文 (含對白)</button>
+              <button class="btn-copy" style="flex: 1; background: rgba(56, 189, 248, 0.1); border-color: var(--cyan); color: var(--cyan);" onclick="copyText('prompt_s6_en')">📋 複製英文</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shot 07 -->
+        <div class="shot-card">
+          <div class="shot-top-bar">
+            <span class="shot-id">SHOT 07 · 終幕破曉</span>
+            <span class="shot-tc">00:54 - 01:00</span>
+          </div>
+          <div class="shot-img-container">
+            <span class="shot-phase-badge">英雄黎明</span>
+            <img src="story_shot_07_sunrise.svg" alt="Shot 07 踏向中圈跳球區的黎明" class="shot-img">
+          </div>
+          <div class="shot-body">
+            <div class="shot-title">踏向中圈跳球區的黎明</div>
+            <div class="shot-camera">Slow Dolly-In Over The Shoulder · God Rays</div>
+            <div class="shot-vo">「從板凳最末端走到球場中央只有十公尺，但我走了整整三百六十五個黎明！」</div>
+            
+            <div style="font-size: 11px; font-weight: 800; color: var(--cyan); margin-top: 4px;">🇨🇳 中文提示詞（含對白台詞與角色情緒）</div>
+            <div class="prompt-box" id="prompt_s7_zh" style="border-color: rgba(56, 189, 248, 0.25); color: #e2e8f0;">電影級運動動漫畫面，9:16直式構圖，越肩低角度慢速推進英雄背影。體育館穹頂玻璃天窗射入萬道破曉朝陽金光（God rays），神聖光芒籠罩陸子軒汗濕的21號黑金球衣。他低頭用力繫緊左手腕上的黑色護腕，堅定邁開步伐踏入球場中央的跳球圓圈。深沉鏗鏘的畫外音對白：「從板凳最末端走到球場中央，只有十公尺。但我，走了整整三百六十五個黎明！」英雄走向光芒的剪影，自信無比，逐漸淡出至黑幕。</div>
+
+            <div style="font-size: 11px; font-weight: 800; color: var(--gold); margin-top: 4px;">🇺🇸 英文提示詞 (MiniMax / Kling / Runway)</div>
+            <div class="prompt-box" id="prompt_s7_en">Cinematic sports anime movie scene, 9:16 vertical frame, slow dolly-in over shoulder heroic back view, brilliant golden sunrise god rays streaming through high glass skylight illuminating weathered jersey #21 on Lu Zi-xuan, tightening black wristband, stepping resolutely into center court jump ball circle, victorious finale</div>
+
+            <div style="display: flex; gap: 8px; margin-top: auto;">
+              <button class="btn-copy" style="flex: 1;" onclick="copyText('prompt_s7_zh')">📋 複製中文 (含對白)</button>
+              <button class="btn-copy" style="flex: 1; background: rgba(56, 189, 248, 0.1); border-color: var(--cyan); color: var(--cyan);" onclick="copyText('prompt_s7_en')">📋 複製英文</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB 2: CHARACTER ROSTER (6 Characters) -->
+    <div id="tab-characters" class="tab-content">
+      <div class="char-grid">
+
+        <!-- 1. Lu Zi-xuan -->
+        <div class="char-card-full lead">
+          <div class="char-thumb">
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_lu_zixuan_1789035561284.jpg" alt="陸子軒">
+          </div>
+          <div class="char-content">
+            <div class="char-name">陸子軒 (Lu Zi-xuan) · #21</div>
+            <div class="char-pos">SF 小前鋒 / 20 歲 / 先發防守大鎖</div>
+            <div class="char-desc">黑碎蓋層次短髮，精實肌肉，黑金紅邊 21 號球衣，左臂護腕，加壓七分褲，Bred球鞋。從第 12 人飲水機守護神逆襲為先發防守大鎖。</div>
+            <div class="prompt-box" id="cp1">20yo handsome athletic East Asian male basketball player Lu Zi-xuan, messy black layered hair, intense determined gaze, confident slight smirk, lean muscular build, wearing black basketball jersey with bold gold number 21 and red trim, black compression knee tights, black left wristband, red-black-white high-top sneakers, arena spotlight, 8k</div>
+            <button class="btn-copy" onclick="copyText('cp1')">📋 複製角色 Prompt</button>
+          </div>
+        </div>
+
+        <!-- 2. Coach Gao -->
+        <div class="char-card-full lead">
+          <div class="char-thumb">
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_coach_gao_1789035576531.jpg" alt="高振峰教練">
+          </div>
+          <div class="char-content">
+            <div class="char-name">高振峰 (Coach Gao) · 總教練</div>
+            <div class="char-pos">總教練 / 40 歲 / 前國家隊鐵血控衛</div>
+            <div class="char-desc">俐落短油頭與鬍茬，銳利鷹隼雙眼。黑底紅金撞色風衣，金屬銀哨，白色戰術夾板。信奉將性命拼在地板上的防守哲學。</div>
+            <div class="prompt-box" id="cp2">40yo mature East Asian male basketball head coach Gao Zhen-feng, neat short black hair, clean facial stubble, sharp falcon eyes glaring with intense discipline, wearing black athletic track jacket with bold red and gold shoulder panels, silver whistle on chest, holding white tactical clipboard, authoritative aura, 8k</div>
+            <button class="btn-copy" onclick="copyText('cp2')">📋 複製角色 Prompt</button>
+          </div>
+        </div>
+
+        <!-- 3. Chen Hao-tian -->
+        <div class="char-card-full">
+          <div class="char-thumb">
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_chen_haotian_1789035869092.jpg" alt="陳浩天">
+          </div>
+          <div class="char-content">
+            <div class="char-name">陳浩天 (Chen Hao-tian) · #4</div>
+            <div class="char-pos">PG 控球後衛 / 21 歲 / 球隊隊長</div>
+            <div class="char-desc">俐落寸頭帶斷眉，黑底紅金 4 號球衣，右小腿加壓護套，白色戰靴。冷靜嚴苛的大腦司令官，最早看破並認可子軒價值的隊長。</div>
+            <div class="prompt-box" id="cp3">21yo serious East Asian male basketball point guard captain Chen Hao-tian, clean buzz cut haircut with subtle eyebrow slit, sharp piercing eyes, calm commanding expression, wearing black basketball jersey with bold #4 and red-gold trim, white basketball sneakers, 8k</div>
+            <button class="btn-copy" onclick="copyText('cp3')">📋 複製角色 Prompt</button>
+          </div>
+        </div>
+
+        <!-- 4. Lin Jing -->
+        <div class="char-card-full">
+          <div class="char-thumb">
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_lin_jing_1789035915101.jpg" alt="林敬">
+          </div>
+          <div class="char-content">
+            <div class="char-name">林敬 (Lin Jing) · #7</div>
+            <div class="char-pos">SG 得分後衛 / 20 歲 / 冷血神射手</div>
+            <div class="char-desc">修長體格，自然微卷黑髮，單眼皮沉靜眼神。黑底青金 7 號球衣，雙臂黑色射手袖。沉默優雅的外線三分刺客。</div>
+            <div class="prompt-box" id="cp4">20yo slender athletic East Asian male basketball shooting guard Lin Jing, stylish wavy black hair, calm focused expression, single eyelids, wearing black basketball jersey with bold cyan and gold #7 trim, black compression shooting sleeves on both arms, 8k</div>
+            <button class="btn-copy" onclick="copyText('cp4')">📋 複製角色 Prompt</button>
+          </div>
+        </div>
+
+        <!-- 5. Zhao Lei -->
+        <div class="char-card-full">
+          <div class="char-thumb">
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_zhao_lei_1789035935123.jpg" alt="趙磊">
+          </div>
+          <div class="char-content">
+            <div class="char-name">趙磊 (Zhao Lei) · #15</div>
+            <div class="char-pos">C 先發中鋒 / 22 歲 / 203cm 禁區守護神</div>
+            <div class="char-desc">粗眉寸頭，203cm 魁梧重裝體格，豪爽陽光笑容。黑底紅金 15 號戰袍，雙膝特厚重裝加壓護膝。子軒撲救後第一個拉起他的隊友。</div>
+            <div class="prompt-box" id="cp5">22yo massive 203cm muscular heavyweight East Asian male basketball center Zhao Lei, thick bushy eyebrows, neat buzz cut, wide shoulders, broad chest, cheerful rugged heroic smile, wearing black basketball jersey #15 with red trim, heavy knee brace pads, 8k</div>
+            <button class="btn-copy" onclick="copyText('cp5')">📋 複製角色 Prompt</button>
+          </div>
+        </div>
+
+        <!-- 6. Lei Zhen -->
+        <div class="char-card-full" style="border-color: #8b5cf6;">
+          <div class="char-thumb">
+            <img src="../../../../brain/31cbc75a-02b7-4f31-bc83-3cd94bdcf6a4/char_lei_zhen_1789035595410.jpg" alt="雷震">
+          </div>
+          <div class="char-content">
+            <div class="char-name" style="color: #c084fc;">雷震 (Lei Zhen) · #0</div>
+            <div class="char-pos" style="color: #f43f5e;">烈風隊王牌 SG / 20 歲 / 宿敵得分王</div>
+            <div class="char-desc">暗銀灰挑染刺蝟頭，桀驁不馴的狂妄冷笑。客場白紫金 0 號球衣，左臂亮螢光黃護臂。八強賽最後被子軒極限防守鎖死。</div>
+            <div class="prompt-box" id="cp6">20yo arrogant athletic East Asian basketball superstar Lei Zhen, messy spiky hair with subtle silver highlights, cocky confident smirk, sharp piercing eyes, wearing away white-and-purple basketball jersey with bold #0, neon yellow arm sleeve, 8k</div>
+            <button class="btn-copy" onclick="copyText('cp6')">📋 複製角色 Prompt</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB 3: STORY NOVEL -->
+    <div id="tab-story" class="tab-content">
+      <div class="story-reader">
+        <h2>《第二十一號的黎明》完整原創故事</h2>
+        
+        <h3>序章：沒資格流汗的人</h3>
+        <p>體育館上空噴灑出滿天金色的彩帶。哨聲長鳴，全場爆發出震耳欲聾的歡呼。隊友們在球場中央相擁、咆哮、拋灑汗水，享受著聚光燈與觀眾席上浪潮般的掌聲。而在替補席最邊緣的角落，陸子軒正默默彎下腰，把隊友隨手扔在腳邊的空水瓶一個個拾起，整齊地裝進塑膠袋裡。他穿著一身潔白、沒有一絲摺痕的熱身外套。胸前印著球隊的隊徽，背後是那個彷彿被遺忘的號碼——21號。整整四十分鐘的比賽，他一秒鐘都沒有上過場。「那一年的全場歡呼……我連一滴汗，都沒資格流。」陸子軒看著自己乾淨平整的球鞋鞋底，指關節因為用力握著水瓶而微微泛白。但他抬起頭時，那雙清瘦俊朗的眉宇間沒有自怨自艾，只有深不見底的火光。「但我不是來這裡……當一輩子觀眾的。」</p>
+
+        <h3>第一章：凌晨五點半的白霧</h3>
+        <p>整座城市還在沉睡。凌晨五點半，初春的寒氣化作白濛濛的薄霧，籠罩在老舊室內球館的鐵捲門外。鑰匙轉動的清脆聲響劃破寂靜。緊接著，是皮球重重砸在拋光木地板上的悶響——砰！砰！砰！球鞋在乾澀的地面上發出尖銳刺耳的急停磨擦聲。汗水沿著陸子軒凌亂的黑髮碎蓋滑落，滴在眼眶邊，刺得生疼，但他連眨都不眨一眼。每天五百次定點跳投，二十組端線折返全速衝刺。加壓褲包裹著的膝蓋早已在劇烈顫抖，胸膛像拉風箱一樣劇烈起伏。「停下。」一道低沉冰冷的聲音突然從球館陰影處傳來。總教練高振峰手裡捏著哨子與戰術板，眼神如獵鷹般銳利。「攻我一次。進了，下一場讓你進輪替名單。」陸子軒降低重心變向突破後撤步出手，然而高教練如鋼鐵般的大火鍋狠狠扇飛了籃球，將子軒擊摔在地。高教練冷冷說道：「腳步浮誇，出手猶豫！球隊裡最不缺的，就是自以為是的得分手！滾回去遞水！」</p>
+
+        <h3>第二章：永不背叛的武器</h3>
+        <p>趴在冰冷的地板上，手肘與膝蓋滲出血絲。陸子軒手指抓著地板，眼眶微紅。但在經歷了短暫的自嘲後，他的眼神化為冰冷的野性。「手感會失準，戰術會被看破，進攻會背叛你……但有一種東西，只要心臟還在跳、肺泡還在呼吸，就永遠不會背叛——那是把對手咬死在半場的骨氣，與哪怕撞得粉身碎骨也不退後一步的防守！」從那天起，陸子軒的訓練徹底瘋魔了。當隊友在練華麗的三分與暴扣時，他在球場底線一遍又一遍練習滑步防守、抗擊打深蹲、極限撲球。隊長陳浩天和中鋒趙磊提早來到球館，看見那個身影如饑餓野獸般在地板上不知疲倦地翻滾撕咬。浩天低聲道：「他要的不是得分數據，他是想成為那堵所有人都繞不過去的牆。」</p>
+
+        <h3>第三章：暴風扯掉外套的時刻</h3>
+        <p>全國八強生死戰，對手是奪冠大熱門「烈風隊」，擁有聯賽最狂傲的得分王——雷震。比賽進行到第四節剩下六分鐘，記分牌上落後整整 14 分。防守球員五犯離場，板凳席死寂。暫停哨響，高教練猛地轉頭射向替補席角落：「陸子軒！把外套脫了！上去，給我像條瘋狗一樣鎖死雷震——至死方休！」陸子軒一把扯掉熱身服，露出黑底紅金「21」號戰袍，全場震驚：「21號是誰？」沒有人知道他是誰，但他踏上球場的腳步堅定無比！</p>
+
+        <h3>第四章：飛出邊線的靈魂</h3>
+        <p>雷震面對陸子軒窒息的死亡纏繞，連番受挫。比賽最後十五秒，分差追至 1 分。雷震強行後仰跳投，球砸框彈飛，朝邊線滾去——出界比賽就結束了！然而一道黑色身影完全無視邊線外的技術台擋板，以完全水平姿態魚躍飛了出去！「球在哪裡，命就在哪裡！！」在撞上護欄前一瞬，陸子軒單手把球狠狠撈回場內！砰！他撞翻了技術台的金屬椅與擋板，水瓶紙張四濺！與此同時，陳浩天接球快攻壓哨暴扣！嘟——！！絕殺逆轉！84 比 83！全場海嘯般狂呼：「二十一號！二十一號！」</p>
+
+        <h3>尾聲：十公尺的黎明</h3>
+        <p>隔天清晨更衣室，高教練在白板上用黑筆寫下了下一場四強賽的先發名單：SF · 陸子軒 #21。破曉的第一縷晨光穿透百葉窗，灑在21號球衣上。子軒繫緊護腕，邁向球場中圈。「從板凳最末端走到球場中央，只有十公尺。但我，走了整整三百六十五個黎明！」</p>
+      </div>
+    </div>
+
+    <!-- TAB 4: PRODUCTION PIPELINE -->
+    <div id="tab-pipeline" class="tab-content">
+      <div class="pipeline-box">
+        <h3 style="color: var(--gold); font-size: 18px; margin-bottom: 8px;">🚀 短影音生產管線檔案快速入口 (Production Assets)</h3>
+        <p style="color: var(--text-muted); font-size: 13.5px;">本專案各項短影片配置、分鏡向量圖、字幕與 API 任務檔案均已就位：</p>
+        
+        <div class="pipeline-grid">
+          <a class="pipeline-item" href="character_gallery.html">
+            <div class="pipeline-title">👥 全角色立體圖鑑卡</div>
+            <div class="pipeline-desc">character_gallery.html · 6 大角色高畫質立繪展覽卡</div>
+          </a>
+
+          <a class="pipeline-item" href="storyboard_images/contact_sheet.html">
+            <div class="pipeline-title">🌐 分鏡聯絡總表</div>
+            <div class="pipeline-desc">contact_sheet.html · 7 鏡頭向量圖與生片參數總覽</div>
+          </a>
+
+          <a class="pipeline-item" href="manifest.json">
+            <div class="pipeline-title">📑 剪輯專案 Manifest</div>
+            <div class="pipeline-desc">manifest.json · 16 鏡頭分段剪輯、音樂壓低與時長配置</div>
+          </a>
+
+          <a class="pipeline-item" href="subtitles.srt">
+            <div class="pipeline-title">🎙️ 旁白字幕檔案</div>
+            <div class="pipeline-desc">subtitles.srt · 完整 16 句熱血旁白時間碼</div>
+          </a>
+
+          <a class="pipeline-item" href="runninghub_minimax_pack/minimax_h3_tasks.json">
+            <div class="pipeline-title">⚡ MiniMax H3 批量任務</div>
+            <div class="pipeline-desc">minimax_h3_tasks.json · 海螺 AI 圖生視頻批量配置</div>
+          </a>
+
+          <a class="pipeline-item" href="runninghub_minimax_pack/runninghub_comfyui_manifest.json">
+            <div class="pipeline-title">🧩 ComfyUI 工作流設定</div>
+            <div class="pipeline-desc">runninghub_comfyui_manifest.json · 角色 IP-Adapter 綁定</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="toast" id="toast">Prompt 提示詞已成功複製到剪貼簿！</div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+
+    function copyText(elementId) {
+      const text = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      });
+    }
+  </script>
+</body>
+</html>
